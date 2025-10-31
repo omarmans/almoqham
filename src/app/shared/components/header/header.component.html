@@ -1,0 +1,167 @@
+<div class="contact-services-bar">
+  <!-- Phone -->
+  <div class="info-item phone-item">
+    <!-- <i class="fa-solid fa-phone"></i> -->
+    <i class="fa-solid fa-mobile-button"></i>
+    <a href="tel:+966507778294">+966 50 777 8294</a>
+  </div>
+
+  <!-- Email -->
+  <div class="info-item email-item">
+    <i class="fa-regular fa-envelope-open"></i>
+    <a href="mailto:info@almoqham-law.com">info{{ "@" }}almoqham-law.com</a>
+  </div>
+
+  <!-- Social Media -->
+  <div class="social-links">
+    <a
+      href="https://www.facebook.com"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Facebook"
+    >
+      <i class="fa-brands fa-facebook-f"></i>
+    </a>
+    <a
+      href="https://www.tiktok.com"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="TikTok"
+    >
+      <i class="fa-brands fa-tiktok"></i>
+    </a>
+    <a
+      href="https://twitter.com"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Twitter"
+    >
+      <i class="fa-brands fa-x-twitter"></i>
+    </a>
+    <a
+      href="https://www.instagram.com"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Instagram"
+    >
+      <i class="fa-brands fa-instagram"></i>
+    </a>
+  </div>
+</div>
+
+<header>
+  <div class="main-cont">
+    <div class="header-wrapper">
+      <!-- Mobile Menu Icon -->
+      <i class="fa-solid fa-bars menu-toggle" (click)="toggleMenu()"></i>
+
+      <!-- Logo -->
+      <div class="logo cursor-pointer" routerLink="/">
+        <img src="logo.png" alt="logo" />
+      </div>
+
+      <!-- Navigation -->
+      <nav [class.active]="menuOpen" [class.rtl]="currentLang === 'ar'">
+        <div class="overlay" (click)="toggleMenu()" *ngIf="menuOpen"></div>
+
+        <div class="menu-content">
+          <div class="menu-header">
+            <h3>{{ currentLang === "ar" ? "القائمة" : "Menu" }}</h3>
+            <i class="fa-solid fa-times close-icon" (click)="toggleMenu()"></i>
+          </div>
+
+          <a
+            routerLink="/"
+            routerLinkActive="active-link"
+            [routerLinkActiveOptions]="{ exact: true }"
+            (click)="toggleMenu()"
+          >
+            {{ "HEADER.HOME" | translate }}
+          </a>
+
+          <a
+            (click)="openWhatsApp()"
+            routerLinkActive="active-link"
+            (click)="toggleMenu()"
+            class="cursor-pointer"
+          >
+            {{ "HEADER.CONSULT" | translate }}
+          </a>
+
+          <!-- <a
+            routerLink="/individual"
+            routerLinkActive="active-link"
+            (click)="toggleMenu()"
+          >
+            {{ "HEADER.INDIVIDUAL" | translate }}
+          </a> -->
+          <a
+            routerLink="/our-services"
+            routerLinkActive="active-link"
+            (click)="toggleMenu()"
+          >
+            {{ "HEADER.OURSRV" | translate }}
+          </a>
+
+          <a
+            routerLink="/notary-services"
+            routerLinkActive="active-link"
+            (click)="toggleMenu()"
+          >
+            {{ "HEADER.NOTARY" | translate }}
+          </a>
+
+          <a
+            routerLink="/company-services"
+            routerLinkActive="active-link"
+            (click)="toggleMenu()"
+          >
+            {{ "HEADER.COMPANY" | translate }}
+          </a>
+
+          <a
+            routerLink="/blog"
+            routerLinkActive="active-link"
+            (click)="toggleMenu()"
+          >
+            {{ "HEADER.BLOG" | translate }}
+          </a>
+
+          <a
+            routerLink="/faq"
+            routerLinkActive="active-link"
+            (click)="toggleMenu()"
+          >
+            {{ "HEADER.FAQ" | translate }}
+          </a>
+
+          <a
+            routerLink="/contact"
+            routerLinkActive="active-link"
+            (click)="toggleMenu()"
+          >
+            {{ "HEADER.CONTACT" | translate }}
+          </a>
+        </div>
+      </nav>
+
+      <!-- Language Buttons -->
+      <div class="lang-switcher">
+        <button
+          class="lang-btn"
+          (click)="switchLang('ar')"
+          [class.active]="currentLang === 'ar'"
+        >
+          عربي
+        </button>
+        <button
+          class="lang-btn"
+          (click)="switchLang('en')"
+          [class.active]="currentLang === 'en'"
+        >
+          EN
+        </button>
+      </div>
+    </div>
+  </div>
+</header>

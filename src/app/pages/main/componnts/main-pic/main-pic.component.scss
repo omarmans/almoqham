@@ -1,0 +1,230 @@
+.attorney-profile {
+  min-height: 60vh; // ياخد كامل ارتفاع الشاشة
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8f9fa;
+  padding: 0; // نشيل الـ padding
+
+  .profile-container {
+    width: 100vw; // كامل عرض الشاشة
+    height: 70vh; // كامل ارتفاع الشاشة
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 0;
+    background: #fff;
+    overflow: hidden;
+    box-shadow: none; // نشيل الـ shadow
+    border-radius: 0; // نشيل الـ border radius
+  }
+
+  .profile-image {
+    position: relative;
+    overflow: hidden;
+    background: #1a1a1a;
+    height: 100%; // كامل الارتفاع
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+
+    .image-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.3) 100%
+      );
+      pointer-events: none;
+    }
+
+    &:hover img {
+      transform: scale(1.05);
+    }
+  }
+
+  .profile-content {
+    padding: 80px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #f5f5f5;
+    text-align: right;
+    height: 100%; // كامل الارتفاع
+  }
+
+  .attorney-name {
+    font-size: 48px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+    letter-spacing: -0.5px;
+  }
+
+  .attorney-title {
+    font-size: 20px;
+    font-weight: 500;
+    color: #8b8b8b;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+  }
+
+  .divider {
+    width: 60px;
+    height: 3px;
+    background: #d4af37;
+    margin-bottom: 30px;
+    margin-right: auto;
+  }
+
+  .attorney-bio {
+    font-size: 18px;
+    line-height: 1.9;
+    color: #4a4a4a;
+    margin-bottom: 40px;
+    font-weight: 400;
+    max-width: 600px;
+  }
+
+  .social-links {
+    display: flex;
+    gap: 15px;
+    justify-content: flex-end;
+  }
+
+  .social-link {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #1a1a1a;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+
+    i {
+      font-size: 20px;
+    }
+
+    &:hover {
+      background: #d4af37;
+      color: #fff;
+      transform: translateY(-3px);
+      box-shadow: 0 5px 20px rgba(212, 175, 55, 0.3);
+    }
+  }
+}
+
+// Responsive Design
+@media (max-width: 992px) {
+  .attorney-profile {
+    .profile-container {
+      grid-template-columns: 45% 55%;
+    }
+
+    .profile-content {
+      padding: 60px 50px;
+    }
+
+    .attorney-name {
+      font-size: 42px;
+    }
+
+    .attorney-bio {
+      font-size: 17px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .attorney-profile {
+    min-height: auto;
+
+    .profile-container {
+      grid-template-columns: 1fr;
+      height: auto;
+      min-height: 100vh;
+    }
+
+    .profile-image {
+      height: 50vh;
+      min-height: 400px;
+
+      img {
+        object-position: center top;
+      }
+    }
+
+    .profile-content {
+      padding: 60px 40px;
+      text-align: center;
+      min-height: 50vh;
+    }
+
+    .attorney-name {
+      font-size: 36px;
+    }
+
+    .attorney-title {
+      font-size: 18px;
+    }
+
+    .divider {
+      margin: 0 auto 30px;
+    }
+
+    .attorney-bio {
+      max-width: 100%;
+    }
+
+    .social-links {
+      justify-content: center;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .attorney-profile {
+    .profile-image {
+      height: 45vh;
+      min-height: 350px;
+    }
+
+    .profile-content {
+      padding: 50px 30px;
+    }
+
+    .attorney-name {
+      font-size: 32px;
+    }
+
+    .attorney-title {
+      font-size: 16px;
+      margin-bottom: 25px;
+    }
+
+    .attorney-bio {
+      font-size: 16px;
+      line-height: 1.8;
+      margin-bottom: 35px;
+    }
+
+    .social-link {
+      width: 45px;
+      height: 45px;
+
+      i {
+        font-size: 18px;
+      }
+    }
+  }
+}

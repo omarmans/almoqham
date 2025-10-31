@@ -1,0 +1,114 @@
+<footer class="footer">
+  <div class="main-cont">
+    <!-- Main Footer Content Grid -->
+    <div class="footer-content">
+      <!-- Column 1: Contact Information -->
+      <div class="footer-column contact-column">
+        <h3 class="footer-title">{{ "FOOTER.CONTACT_INFO" | translate }}</h3>
+
+        <div class="contact-items">
+          <!-- Office Address -->
+          <div class="contact-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <p>{{ "FOOTER.ADDRESS" | translate }}</p>
+          </div>
+
+          <!-- Email Contact -->
+          <div class="contact-item">
+            <i class="fa-solid fa-envelope"></i>
+            <a [href]="'mailto:' + ('FOOTER.EMAIL' | translate)">
+              {{ "FOOTER.EMAIL" | translate }}
+            </a>
+          </div>
+
+          <!-- Phone Contact -->
+          <div class="contact-item">
+            <i class="fa-solid fa-mobile-button"></i>
+            <a [href]="'tel:' + ('FOOTER.PHONE' | translate)">
+              {{ "FOOTER.PHONE" | translate }}
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Column 2: Our Services -->
+      <div class="footer-column services-column">
+        <h3 class="footer-title">{{ "HEADER.OURSRV" | translate }}</h3>
+
+        <ul class="footer-links">
+          <li *ngFor="let service of services">
+            <a [routerLink]="service.route">
+              <i [class]="'fa-solid ' + service.icon"></i>
+              {{ service.label | translate }}
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Useful Links -->
+      <div class="footer-column links-column">
+        <h3 class="footer-title">{{ "FOOTER.USEFUL_LINKS" | translate }}</h3>
+
+        <ul class="footer-links">
+          <li *ngFor="let link of quickLinks">
+            <a [routerLink]="link.route">
+              {{ link.label | translate }}
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Column 4: Newsletter Subscription -->
+      <div class="footer-column newsletter-column">
+        <h3 class="footer-title">{{ "FOOTER.NEWSLETTER" | translate }}</h3>
+
+        <!-- Newsletter Form -->
+        <form class="newsletter-form" (ngSubmit)="subscribeNewsletter()">
+          <input
+            type="email"
+            [(ngModel)]="email"
+            name="email"
+            [placeholder]="'FOOTER.EMAIL_PLACEHOLDER' | translate"
+            required
+            class="newsletter-input"
+            aria-label="Newsletter email input"
+          />
+          <button
+            type="submit"
+            class="newsletter-btn"
+            aria-label="Subscribe to newsletter"
+          >
+            {{ "FOOTER.SEND_BTN" | translate }}
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Social Media Section -->
+    <div class="social-section">
+      <h3 class="social-title">{{ "FOOTER.FOLLOW_US" | translate }}</h3>
+
+      <div class="social-links">
+        <!-- Social Media Icons Loop -->
+        <a
+          *ngFor="let social of socialMedia"
+          [href]="social.url"
+          target="_blank"
+          rel="noopener noreferrer"
+          [attr.aria-label]="social.name"
+          class="social-link"
+        >
+          <i [class]="social.icon"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- Copyright Section -->
+    <div class="copyright">
+      <p>
+        {{ "FOOTER.COPYRIGHT" | translate }} © {{ currentYear }}
+        {{ "FOOTER.COMPANY_NAME" | translate }}
+      </p>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,52 @@
+<div class="hero-wrapper">
+  <p-carousel
+    [value]="slides()"
+    [numVisible]="1"
+    [numScroll]="1"
+    [circular]="true"
+    [autoplayInterval]="4000"
+    [showNavigators]="false"
+    class="hero-carousel"
+    [showIndicators]="false"
+  >
+    <ng-template pTemplate="item" let-slide>
+      <div class="slide">
+        <div class="overlay"></div>
+        <div
+          class="content"
+          [style.text-align]="currentLang() === 'en' ? 'left' : 'right'"
+        >
+          <h2 class="text-6xl">{{ getText(slide.title) }}</h2>
+          <p class="text-3xl">{{ getText(slide.subtitle) }}</p>
+          <button
+            pButton
+            type="button"
+            [label]="getText(slide.button)"
+            class="hero-btn"
+          ></button>
+        </div>
+      </div>
+    </ng-template>
+  </p-carousel>
+
+  <section class="landing-section">
+    <div class="main-cont">
+      <div class="landing-content">
+        <div class="certificates-section">
+          <h3 class="certificates-title">
+            {{
+              currentLang() === "ar"
+                ? "الإعتمادات و الشهادات"
+                : "Certifications & Accreditations"
+            }}
+          </h3>
+          <div class="certificates-grid">
+            <div class="certificate-item" *ngFor="let img of certificats()">
+              <img [src]="'imgs/certificats/' + img" [alt]="'Certificate'" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

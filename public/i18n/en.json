@@ -1,0 +1,50 @@
+{
+  "HEADER": {
+    "HOME": "Home",
+    "CONSULT": "Consultation",
+    "INDIVIDUAL": "Individual Services",
+    "NOTARY": "Notary Services",
+    "COMPANY": "Company Services",
+    "BLOG": "Blog",
+    "FAQ": "FAQ",
+    "CONTACT": "Contact Us",
+    "OURSRV": "Our Services"
+  },
+  "HOME": {
+    "TITLE": "Your Legal Consultation at the Click of a Button",
+    "SUBTITLE": "We are at your service 24/7 – all week long.",
+    "BUTTON": "Book Your Consultation",
+    "LEGAL_SERVICES": "Legal Services for Everyone!"
+  },
+  "CTA": {
+    "TITLE": "Got a Problem? Consult Us",
+    "BUTTON": "Request Consultation",
+    "DONT": "Don't hesitate to contact us"
+  },
+  "BLOG": {
+    "SUBTITLE": "Our Official Blog",
+    "TITLE": "Latest Articles and Posts"
+  },
+  "FOOTER": {
+    "CONTACT_INFO": "Contact Information",
+    "ADDRESS": "Riyadh, Sheikh Abdul Latif bin Ibrahim Street 12652",
+    "EMAIL": "info@aljurais-law.com",
+    "PHONE": "+966 50 777 8294",
+    "USEFUL_LINKS": "Useful Links",
+    "NEWSLETTER": "Newsletter",
+    "EMAIL_PLACEHOLDER": "Email Address",
+    "SEND_BTN": "Send",
+    "FOLLOW_US": "Follow Us",
+    "COPYRIGHT": "All Rights Reserved",
+    "COMPANY_NAME": "Turki Al-Jurais Law Firm"
+  },
+  "NEWSLETTER": {
+    "SUCCESS": "Successfully subscribed to the newsletter!",
+    "ERROR": "Please enter a valid email address"
+  },
+  "SERVICES": {
+    "GOOD": "These are the services we offer you with the best quality.",
+    "DETAIlS": "Service details",
+    "ORDER": "Order now"
+  }
+}

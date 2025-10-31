@@ -1,0 +1,45 @@
+<section class="blog-section">
+  <div class="main-cont">
+    <div class="section-header">
+      <h2 class="subtitle">{{ "BLOG.SUBTITLE" | translate }}</h2>
+      <h3 class="main-title">{{ "BLOG.TITLE" | translate }}</h3>
+      <div class="title-divider"></div>
+    </div>
+
+    <div class="blog-grid">
+      <article class="blog-card" *ngFor="let post of paginatedPosts()">
+        <a [routerLink]="['/blog', post.slug]" class="blog-link">
+          <div class="blog-image">
+            <img src="imgs/blog.webp" alt="Blog" />
+            <div class="image-overlay"></div>
+          </div>
+          <div class="blog-content">
+            <h4 class="blog-title">{{ getText(post.title) }}</h4>
+            <div class="blog-footer">
+              <span class="read-more">
+                {{ currentLang() === "ar" ? "اقرأ المزيد" : "Read More" }}
+
+                <i
+                  class="fa-solid fa-arrow-left"
+                  [style.transform]="
+                    currentLang() === 'en' ? 'rotate(180deg)' : 'none'
+                  "
+                ></i>
+              </span>
+            </div>
+          </div>
+        </a>
+      </article>
+    </div>
+  </div>
+
+  <div class="card flex justify-center max-w-full">
+    <p-paginator
+      (onPageChange)="onPageChange($event)"
+      [first]="first()"
+      [rows]="rows()"
+      [totalRecords]="blogPosts().length"
+      [rowsPerPageOptions]="[3, 5, 10]"
+    />
+  </div>
+</section>
