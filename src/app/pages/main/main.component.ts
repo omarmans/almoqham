@@ -13,6 +13,7 @@ import { BlogComponent } from './componnts/blog/blog.component';
 import { AboutComponent } from './componnts/about/about.component';
 import { ContactComponent } from './componnts/contact/contact.component';
 import { MainPicComponent } from './componnts/main-pic/main-pic.component';
+import { MainServicesComponent } from './componnts/main-services/main-services.component';
 
 @Component({
   selector: 'app-main',
@@ -31,6 +32,7 @@ import { MainPicComponent } from './componnts/main-pic/main-pic.component';
     AboutComponent,
     ContactComponent,
     MainPicComponent,
+    MainServicesComponent,
   ],
   templateUrl: './main.component.html',
   styleUrls: ['./main.component.scss'],

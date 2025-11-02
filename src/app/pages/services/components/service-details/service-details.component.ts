@@ -36,6 +36,6 @@ export class ServiceDetailsComponent implements OnInit {
   }
 
   goBack() {
-    this.router.navigate(['/services']);
+    this.router.navigate(['/our-services']);
   }
 }
