@@ -18,6 +18,15 @@ export class HeaderComponent implements OnInit, OnDestroy {
   menuOpen = false;
   private langSubscription?: Subscription;
   openWhatsApp = openWhatsApp;
+  goToGmail() {
+    const to = 'suleman@almughem.sa';
+    const cc = 'abonasersa623@gmail.com';
+    const subject = encodeURIComponent('استشارة من موقع سليمان المقحم');
+    const body = encodeURIComponent('مرحبًا،\n\nأرغب في استشارة بخصوص ...');
+
+    const mailtoLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${to}&cc=${cc}&su=${subject}&body=${body}`;
+    window.open(mailtoLink, '_blank');
+  }
   constructor(private languageService: LanguageService) {}
   ngOnInit() {
     // Subscribe to language changes
