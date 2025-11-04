@@ -1,4 +1,12 @@
 {
+  "SHARED": {
+    "name": "إسمك",
+    "PHONE": "رقم الجوال",
+    "CHOOSESERVICE": "اختر الخدمة",
+    "YOURMSG": "رسائلك",
+    "OPT": "إختيارى",
+    "CON_WITH_US": "تواصل معنا"
+  },
   "HEADER": {
     "HOME": "الرئيسية",
     "CONSULT": "طلب استشارة",
@@ -48,5 +56,8 @@
     "ORDER": "اطلب الآن",
     "RULESSRV": "خدماتنا القانونية",
     "SHOW_MORE": "عرض المزيد"
+  },
+  "LegalSdocumentationServices": {
+    "TITLE": "خدمات التوثيق القانونية"
   }
 }
