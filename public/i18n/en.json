@@ -1,4 +1,13 @@
 {
+  "SHARED": {
+    "name": "Your Name",
+    "PHONE": "Phone Number",
+    "CHOOSESERVICE": "Choose Service",
+
+    "YOURMSG": "Your Messege",
+    "OPT": "Optional",
+    "CON_WITH_US": "Contact With Us"
+  },
   "HEADER": {
     "HOME": "Home",
     "CONSULT": "Consultation",
@@ -44,6 +53,13 @@
   },
   "SERVICES": {
     "GOOD": "These are the services we offer you with the best quality.",
+    "DETAIlS": "Service details",
+    "ORDER": "Order now",
+    "RULESSRV": "Our Legal Services",
+    "SHOW_MORE": "Show More"
+  },
+  "LegalSdocumentationServices": {
+    "TITLE": "Legal documentation services",
     "DETAIlS": "Service details",
     "ORDER": "Order now",
     "RULESSRV": "Our Legal Services",

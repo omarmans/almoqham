@@ -26,4 +26,11 @@ export const routes: Routes = [
         './pages/services/components/service-details/service-details.component'
       ).then((m) => m.ServiceDetailsComponent),
   },
+  {
+    path: 'LegalSdocumentationServices',
+    loadComponent: () =>
+      import(
+        './pages/legal-documentation-services/legal-documentation-services.component'
+      ).then((m) => m.LegalDocumentationServicesComponent),
+  },
 ];
