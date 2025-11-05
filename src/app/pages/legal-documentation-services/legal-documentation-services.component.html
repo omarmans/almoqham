@@ -1,51 +1,46 @@
-<app-main-header
-  pageTitle="LegalSdocumentationServices.TITLE"
-  [showPath]="true"
-/>
+<app-main-header [pageTitle]="currentTranslation.title" [showPath]="true" />
 
-<div class="LegalSdocumentationServices bg-white text-black">
+<div
+  class="LegalSdocumentationServices bg-white text-black"
+  [attr.dir]="currentLang() === 'ar' ? 'rtl' : 'ltr'"
+>
   <div class="main-cont">
     <!-- Left Section: Form & Services (Sidebar) -->
     <div class="left-section">
       <!-- Contact Form -->
       <div class="contact-box">
-        <h2 class="section-title">تواصل معنا</h2>
+        <h2 class="section-title">{{ currentTranslation.contactUs }}</h2>
         <form class="contact-form">
-          <input type="text" placeholder="الاسم" class="form-input" />
-          <input type="tel" placeholder="رقم الجوال" class="form-input" />
-          <input type="text" placeholder="خدمة التوثيق" class="form-input" />
-          <textarea
-            placeholder="رسالتك (اختياري)"
-            class="form-textarea"
-            rows="4"
-          ></textarea>
-
-          <div class="captcha-wrapper">
-            <div class="captcha-box">
-              <input type="checkbox" id="human-check" />
-              <label for="human-check">I am human</label>
-            </div>
-            <div class="captcha-icon">
-              <i class="fas fa-shield-alt"></i>
-            </div>
-          </div>
+          <input
+            type="text"
+            [placeholder]="currentTranslation.namePlaceholder"
+            class="form-input"
+            readonly
+            value="سليمان صالح المقحم"
+          />
+          <input
+            type="tel"
+            [placeholder]="currentTranslation.phonePlaceholder"
+            class="form-input"
+            readonly
+            value="966504484337"
+          />
 
           <button type="button" (click)="openWhatsApp()" class="submit-btn">
-            إرسل
+            {{ currentTranslation.btnContact }}
           </button>
         </form>
       </div>
 
       <!-- Services List -->
       <div class="services-box">
-        <h2 class="section-title">خدماتنا</h2>
+        <h2 class="section-title">{{ currentTranslation.ourServices }}</h2>
         <div class="services-tabs">
-          <button class="tab-btn active">قسمة التركات</button>
-          <button class="tab-btn">الإفلاس والتصفية</button>
-          <button class="tab-btn">قضايا الشركات</button>
-          <button class="tab-btn">الاستثمار الأجنبي</button>
-          <button class="tab-btn">التقاضي وتسوية المنازعات</button>
-          <button class="tab-btn">خدمات التوثيق القانونية</button>
+          @for (srv of servicesList(); track $index) {
+          <button class="tab-btn" [class.active]="$index === 0">
+            {{ currentLang() === "ar" ? srv.ar : srv.en }}
+          </button>
+          }
         </div>
       </div>
     </div>
@@ -54,118 +49,60 @@
     <div class="right-section">
       <!-- Intro Paragraph -->
       <div class="intro-text">
-        <p>
-          تعد <strong>التوثيق</strong> ركنًا أساسيًا في النظام القانوني، حيث
-          يساهم في حفظة حقوق الأفراد والشركات ومعاملاتهم المختلفة. الالتزامات
-          بشكل رسمي وموثوق، من خلال التوثيق الفعال ينتي الثقة في الأطراف، وتحقيق
-          سلامة المعاملات، معنا يقلل من المخاطر القانونية المحتملة في
-          <strong>ماستري للمحاماة</strong> نوفر خدمات توثيق دقيقة واحترافية تضم
-          استقرار المعاملات التجارية وتضمن الامتثال التام للأنظمة المحلية
-          والدولية.
-        </p>
+        <p>{{ currentTranslation.introText }}</p>
       </div>
 
       <!-- Services Section -->
       <div class="content-section">
-        <h2 class="main-heading">خدماتنا في مجال التوثيق:</h2>
-        <p class="sub-heading">يشمل نطاق عملنا في التوثيق الخدمات التالية:</p>
+        <h2 class="main-heading">{{ currentTranslation.mainHeading }}</h2>
+        <p class="sub-heading">{{ currentTranslation.subHeading }}</p>
 
         <div class="services-list">
+          @for (service of currentTranslation.services; track $index) {
           <div class="service-item">
             <i class="fas fa-check-circle"></i>
             <div class="service-content">
-              <strong>إعداد الوكالات والإقرارات:</strong>
-              صياغة وتوثيق الوكالات العامة والخاصة بما يضمن سلامة الإجراءات.
+              <strong>{{ service.title }}</strong>
+              {{ service.description }}
             </div>
           </div>
-
-          <div class="service-item">
-            <i class="fas fa-check-circle"></i>
-            <div class="service-content">
-              <strong>توثيق عقود الشركات وقرارات الشركاء:</strong>
-              اعتماد رسمي لعقود التأسيس والتعديلات الخاصة بها يحقق الحفظ
-              القانوني الصحيح.
-            </div>
-          </div>
-
-          <div class="service-item">
-            <i class="fas fa-check-circle"></i>
-            <div class="service-content">
-              <strong>الإفراغات والرهون العقارية:</strong>
-              إنهاء إجراءات التوثيق المتعلقة بالعقارات بشكل قانوني آمن.
-            </div>
-          </div>
-
-          <div class="service-item">
-            <i class="fas fa-check-circle"></i>
-            <div class="service-content">
-              <strong>التسجيل العيني للعقارات:</strong>
-              توثيق الحيازات العقارية وفقًا للأنظمة المطبقة في المملكة.
-            </div>
-          </div>
-
-          <div class="service-item">
-            <i class="fas fa-check-circle"></i>
-            <div class="service-content">
-              <strong>توثيق المعاوضات:</strong>
-              ضمان قانونية التبرعات العامة وحفظ حقوق الدائنين والمدينين.
-            </div>
-          </div>
-
-          <div class="service-item">
-            <i class="fas fa-check-circle"></i>
-            <div class="service-content">
-              <strong>توثيق مختلف العقود والمعاملات:</strong>
-              تغطية جميع أنواع العقود لضمان صحتها القانونية وحمايتها من
-              النزاعات.
-            </div>
-          </div>
+          }
         </div>
 
         <div class="cta-wrapper">
-          <button (click)="openWhatsApp()" class="cta-btn">تواصل معنا</button>
+          <button (click)="openWhatsApp()" class="cta-btn">
+            {{ currentTranslation.btnContact }}
+          </button>
         </div>
       </div>
 
       <!-- Why Choose Section -->
       <div class="content-section">
-        <h2 class="main-heading">
-          لماذا تختار ماستري للمحاماة في خدمات التوثيق؟
-        </h2>
+        <h2 class="main-heading">{{ currentTranslation.whyUsTitle }}</h2>
 
         <div class="reasons-list">
+          @for (point of currentTranslation.whyUsPoints; track $index) {
           <div class="reason-item">
             <i class="fas fa-check-circle"></i>
-            <span>خبرة عميقة في إجراءات التوثيق بمختلف أنواعها.</span>
+            <span>{{ point }}</span>
           </div>
-
-          <div class="reason-item">
-            <i class="fas fa-check-circle"></i>
-            <span>التزام كامل بالأنظمة السعودية والمتطلبات الدولية.</span>
-          </div>
-
-          <div class="reason-item">
-            <i class="fas fa-check-circle"></i>
-            <span>دقة وسرعة في إنجاز المعاملات القانونية.</span>
-          </div>
+          }
         </div>
 
         <div class="cta-wrapper">
-          <button (click)="openWhatsApp()" class="cta-btn">تواصل معنا</button>
+          <button (click)="openWhatsApp()" class="cta-btn">
+            {{ currentTranslation.btnContact }}
+          </button>
         </div>
       </div>
 
       <!-- Final CTA Section -->
       <div class="content-section final-cta">
-        <h2 class="main-heading">اطلب إستشارتك الآن</h2>
-        <p class="cta-description">
-          مع <strong>ماستري للمحاماة</strong> يمكنك إنجاز كافة معاملاتك
-          التوثيقية بثقة واطمئنان، من خلال فريق قانوني متخصص يضمن لك الحماية
-          القانونية الكاملة.
-        </p>
+        <h2 class="main-heading">{{ currentTranslation.finalCtaTitle }}</h2>
+        <p class="cta-description">{{ currentTranslation.finalCtaDesc }}</p>
         <div class="cta-wrapper">
           <button (click)="openWhatsApp()" class="cta-btn-large">
-            تواصل معنا
+            {{ currentTranslation.btnContact }}
           </button>
         </div>
       </div>
