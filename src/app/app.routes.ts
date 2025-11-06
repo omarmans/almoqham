@@ -33,4 +33,9 @@ export const routes: Routes = [
         './pages/legal-documentation-services/legal-documentation-services.component'
       ).then((m) => m.LegalDocumentationServicesComponent),
   },
+  {
+    path: 'FAQ',
+    loadComponent: () =>
+      import('./pages/faq/faq.component').then((m) => m.FaqComponent),
+  },
 ];
