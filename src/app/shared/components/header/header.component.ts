@@ -31,12 +31,10 @@ export class HeaderComponent implements OnInit, OnDestroy {
   ) {}
 
   ngOnInit() {
-    // 🔹 متابعة تغيّر اللغة
     this.langSubscription = this.languageService.currentLang$.subscribe(
       (lang) => (this.currentLang = lang)
     );
 
-    // 🔹 اقفل المينيو تلقائيًا بعد أي تنقل
     this.routerSubscription = this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
         this.menuOpen = false;
