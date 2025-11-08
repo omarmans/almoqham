@@ -7,7 +7,7 @@ import { LanguageService } from '../../shared/services/language.service';
 
 @Component({
   selector: 'app-legal-documentation-services',
-  imports: [MainHeaderComponent, TranslatePipe, FormsModule],
+  imports: [MainHeaderComponent, FormsModule],
   templateUrl: './legal-documentation-services.component.html',
   styleUrl: './legal-documentation-services.component.scss',
 })
