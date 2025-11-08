@@ -69,91 +69,42 @@
             <h3>{{ currentLang === "ar" ? "القائمة" : "Menu" }}</h3>
             <i class="fa-solid fa-times close-icon" (click)="toggleMenu()"></i>
           </div>
-
           <a
             routerLink="/"
             routerLinkActive="active-link"
             [routerLinkActiveOptions]="{ exact: true }"
-            (click)="toggleMenu()"
           >
             {{ "HEADER.HOME" | translate }}
           </a>
 
-          <a
-            (click)="openWhatsApp()"
-            routerLinkActive="active-link"
-            (click)="toggleMenu()"
-            class="cursor-pointer"
-          >
+          <a (click)="openWhatsApp()" class="cursor-pointer">
             {{ "HEADER.CONSULT" | translate }}
           </a>
 
-          <!-- <a
-            routerLink="/individual"
-            routerLinkActive="active-link"
-            (click)="toggleMenu()"
-          >
-            {{ "HEADER.INDIVIDUAL" | translate }}
-          </a> -->
-          <a
-            routerLink="/our-services"
-            routerLinkActive="active-link"
-            (click)="toggleMenu()"
-          >
+          <a routerLink="/our-services" routerLinkActive="active-link">
             {{ "HEADER.OURSRV" | translate }}
           </a>
 
-          <!-- <a
-            routerLink="/notary-services"
-            routerLinkActive="active-link"
-            (click)="toggleMenu()"
-          >
-            {{ "HEADER.NOTARY" | translate }}
-          </a> -->
           <a
             routerLink="/LegalSdocumentationServices"
             routerLinkActive="active-link"
-            (click)="toggleMenu()"
           >
             {{ "LegalSdocumentationServices.TITLE" | translate }}
           </a>
-          <a
-            routerLink="/ChildCustody"
-            routerLinkActive="active-link"
-            (click)="toggleMenu()"
-          >
+
+          <a routerLink="/ChildCustody" routerLinkActive="active-link">
             {{ "ChildCustody.TITLE" | translate }}
           </a>
 
-          <a
-            routerLink="/company-services"
-            routerLinkActive="active-link"
-            (click)="toggleMenu()"
-          >
-            {{ "HEADER.COMPANY" | translate }}
-          </a>
-
-          <a
-            routerLink="/blog"
-            routerLinkActive="active-link"
-            (click)="toggleMenu()"
-          >
+          <a routerLink="/blog" routerLinkActive="active-link">
             {{ "HEADER.BLOG" | translate }}
           </a>
 
-          <a
-            routerLink="/FAQ"
-            routerLinkActive="active-link"
-            (click)="toggleMenu()"
-          >
+          <a routerLink="/FAQ" routerLinkActive="active-link">
             {{ "HEADER.FAQ" | translate }}
           </a>
 
-          <a
-            routerLink="/contact"
-            routerLinkActive="active-link"
-            (click)="toggleMenu()"
-          >
+          <a routerLink="/contact" routerLinkActive="active-link">
             {{ "HEADER.CONTACT" | translate }}
           </a>
         </div>

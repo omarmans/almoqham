@@ -5,6 +5,7 @@ import { BlogPost } from '../../interface/interface';
 import { NgClass, NgFor } from '@angular/common';
 import { PaginatorModule, Paginator } from 'primeng/paginator';
 import { LanguageService } from '../../../../shared/services/language.service';
+import { scrollToElement } from '../../../../shared/funcations/scrollT0';
 
 @Component({
   selector: 'app-blog',
@@ -160,19 +161,7 @@ export class BlogComponent {
   onPageChange(event: any) {
     this.first.set(event.first);
     this.rows.set(event.rows);
-    this.scrollToBlogSection();
-  }
-
-  private scrollToBlogSection() {
-    setTimeout(() => {
-      const blogSection = document.querySelector('.blog-section');
-      if (blogSection) {
-        blogSection.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start',
-        });
-      }
-    }, 100);
+    scrollToElement('.blog-section');
   }
 
   getText(text: { ar: string; en: string }): string {
