@@ -34,6 +34,13 @@ export const routes: Routes = [
       ).then((m) => m.LegalDocumentationServicesComponent),
   },
   {
+    path: 'ChildCustody',
+    loadComponent: () =>
+      import('./pages/child-custody/child-custody.component').then(
+        (m) => m.ChildCustodyComponent
+      ),
+  },
+  {
     path: 'FAQ',
     loadComponent: () =>
       import('./pages/faq/faq.component').then((m) => m.FaqComponent),
