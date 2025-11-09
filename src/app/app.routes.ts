@@ -1,5 +1,6 @@
 import { Routes } from '@angular/router';
 import { MainComponent } from './pages/main/main.component';
+import { BlogsDetailsComponent } from './pages/blogs-details/blogs-details.component';
 
 export const routes: Routes = [
   { path: '', component: MainComponent, title: 'HOME' },
@@ -51,5 +52,13 @@ export const routes: Routes = [
       import('./pages/contact-us/contact-us.component').then(
         (m) => m.ContactUsComponent
       ),
+  },
+  {
+    path: 'blog/:slug',
+    loadComponent: () =>
+      import('./pages/blogs-details/blogs-details.component').then(
+        (m) => m.BlogsDetailsComponent
+      ),
+    title: 'Blog Details',
   },
 ];
