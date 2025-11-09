@@ -61,4 +61,12 @@ export const routes: Routes = [
       ),
     title: 'Blog Details',
   },
+  {
+    path: 'blogs',
+    loadComponent: () =>
+      import('./pages/blogs/all-blogs/all-blogs.component').then(
+        (m) => m.AllBlogsComponent
+      ),
+    title: 'Blog Details',
+  },
 ];
