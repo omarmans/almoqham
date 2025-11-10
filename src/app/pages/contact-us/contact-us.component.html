@@ -1,4 +1,4 @@
-<app-main-header [pageTitle]="'HEADER.FAQ'" [showPath]="true" />
+<app-main-header [pageTitle]="'HEADER.CONTACT'" [showPath]="true" />
 
 <section class="min-h-screen bg-gray-50 py-16 px-4">
   <div class="max-w-7xl mx-auto flex items-center justify-center">
@@ -11,12 +11,17 @@
             class="text-3xl md:text-4xl lg:text-5xl font-bold text-[#1a3d3d] leading-tight mb-6"
             [class.text-right]="currentLang === 'ar'"
             [class.text-left]="currentLang === 'en'"
+            [innerHTML]="
+              currentLang === 'ar'
+                ? 'هل لديك سؤال؟ <br/> تواصل مع الشركة في أي وقت من خلال أرقام الإتصال و سيتواصل معك أحد موظفينا'
+                : 'Do you have a question?<br/> Contact the company at any time by our numbers and one of our staff will contact you or you can use one of the two methods below'
+            "
           >
-            {{
+            <!-- {{
               currentLang === "ar"
                 ? "هل لديك سؤال؟ تواصل مع الشركة في أي وقت من خلال ملء النموذج و سيتواصل معك احد موظفينا او يمكنك إستخدام احدى الوسيلتين في الاسفل"
                 : "Do you have a question? Contact the company at any time by filling out the form and one of our staff will contact you or you can use one of the two methods below"
-            }}
+            }} -->
           </h2>
         </div>
 

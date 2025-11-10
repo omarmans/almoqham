@@ -4,11 +4,12 @@ import { TranslatePipe } from '@ngx-translate/core';
 import { LanguageService } from '../../services/language.service';
 import { Subscription } from 'rxjs';
 import { openWhatsApp } from '../../funcations/whatapp';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-main-header',
   standalone: true,
-  imports: [CommonModule, TranslatePipe],
+  imports: [CommonModule, TranslatePipe, RouterLink],
   templateUrl: './main-header.component.html',
   styleUrls: ['./main-header.component.scss'],
 })
