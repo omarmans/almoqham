@@ -4,11 +4,12 @@ import { TranslatePipe } from '@ngx-translate/core';
 import { openWhatsApp } from '../../shared/funcations/whatapp';
 import { FormsModule, NgModel } from '@angular/forms';
 import { LanguageService } from '../../shared/services/language.service';
-import { email } from '../../shared/data/data';
+import { email, phoneNum } from '../../shared/data/data';
+import { NgClass } from '@angular/common';
 
 @Component({
   selector: 'app-legal-documentation-services',
-  imports: [MainHeaderComponent, FormsModule],
+  imports: [NgClass, MainHeaderComponent, FormsModule],
   templateUrl: './legal-documentation-services.component.html',
   styleUrl: './legal-documentation-services.component.scss',
 })
@@ -18,6 +19,7 @@ export class LegalDocumentationServicesComponent {
   isHuman = false;
   openWhatsApp = openWhatsApp;
   email = email;
+  phoneNum = phoneNum;
 
   // إضافة computed signal للحصول على الترجمة الحالية
   get currentTranslation() {

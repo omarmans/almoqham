@@ -15,23 +15,23 @@ export class FaqComponent implements OnInit, OnDestroy {
   private langSubscription?: Subscription;
 
   faqs = [
-    {
-      question: {
-        ar: 'ما هو الفارق بين طلب الاستشارة القانونية، وطلب دراسة القضية؟',
-        en: 'What is the difference between requesting legal advice and a case study?',
-      },
-      answers: {
-        ar: [
-          'الاستشارة القانونية: تعني طلب الحصول على الرأي القانوني فيما يتعلق بمسألة معينة أو نزاع معين، من أجل بيان وجهة نظر القانون فيها.',
-          'دراسة القضية: تقديم دراسة للعميل سواء كان فردًا أو شركة، مستندة إلى تفاصيل القضية وجوانبها القانونية للوصول إلى أنسب الحلول القانونية.',
-        ],
-        en: [
-          'Legal advice: means seeking a professional legal opinion regarding a specific issue or dispute to clarify the legal perspective.',
-          'Case study: a detailed analysis provided to a client or company, based on case details and legal aspects to find the best possible solutions.',
-        ],
-      },
-      open: false,
-    },
+    // {
+    //   question: {
+    //     ar: 'ما هو الفارق بين طلب الاستشارة القانونية، وطلب دراسة القضية؟',
+    //     en: 'What is the difference between requesting legal advice and a case study?',
+    //   },
+    //   answers: {
+    //     ar: [
+    //       'الاستشارة القانونية: تعني طلب الحصول على الرأي القانوني فيما يتعلق بمسألة معينة أو نزاع معين، من أجل بيان وجهة نظر القانون فيها.',
+    //       'دراسة القضية: تقديم دراسة للعميل سواء كان فردًا أو شركة، مستندة إلى تفاصيل القضية وجوانبها القانونية للوصول إلى أنسب الحلول القانونية.',
+    //     ],
+    //     en: [
+    //       'Legal advice: means seeking a professional legal opinion regarding a specific issue or dispute to clarify the legal perspective.',
+    //       'Case study: a detailed analysis provided to a client or company, based on case details and legal aspects to find the best possible solutions.',
+    //     ],
+    //   },
+    //   open: false,
+    // },
     {
       question: {
         ar: 'ما الفرق بين المحامي والمستشار القانوني والحقوقي؟',

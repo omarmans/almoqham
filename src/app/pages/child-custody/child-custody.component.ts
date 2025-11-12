@@ -4,7 +4,7 @@ import { TranslatePipe } from '@ngx-translate/core';
 import { openWhatsApp } from '../../shared/funcations/whatapp';
 import { FormsModule, NgModel } from '@angular/forms';
 import { LanguageService } from '../../shared/services/language.service';
-import { email } from '../../shared/data/data';
+import { email, phoneNum } from '../../shared/data/data';
 
 @Component({
   selector: 'app-child-custody',
@@ -18,7 +18,7 @@ export class ChildCustodyComponent {
   isHuman = false;
   openWhatsApp = openWhatsApp;
   email = email;
-
+  phoneNum = phoneNum;
   get currentTranslation() {
     return this.currentLang() === 'ar'
       ? this.translation.ar

@@ -2,13 +2,13 @@ import { Component, inject } from '@angular/core';
 import { openWhatsApp } from '../../../../shared/funcations/whatapp';
 import { LanguageService } from '../../../../shared/services/language.service';
 import { SERVICES } from '../../../services/data/services';
-import { DecimalPipe } from '@angular/common';
+import { DecimalPipe, NgClass } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-main-services',
-  imports: [TranslatePipe, DecimalPipe, RouterLink],
+  imports: [NgClass, TranslatePipe, DecimalPipe, RouterLink],
   templateUrl: './main-services.component.html',
   styleUrl: './main-services.component.scss',
 })

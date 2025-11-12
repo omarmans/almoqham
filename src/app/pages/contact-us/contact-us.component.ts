@@ -17,6 +17,8 @@ import {
   PhoneNumberFormat,
 } from 'ngx-intl-tel-input';
 import { MainHeaderComponent } from '../../shared/components/main-header/main-header.component';
+import { email, phoneNum } from '../../shared/data/data';
+import { openWhatsApp } from '../../shared/funcations/whatapp';
 
 @Component({
   selector: 'app-contact-us',
@@ -34,10 +36,12 @@ export class ContactUsComponent implements OnInit, OnDestroy {
   CountryISO = CountryISO;
   SearchCountryField = SearchCountryField;
   PhoneNumberFormat = PhoneNumberFormat;
-
+  email = email;
+  openWhatApp = openWhatsApp;
   contactForm!: FormGroup;
   currentLang: string = 'ar';
   private langSubscription?: Subscription;
+  phoneNum = phoneNum;
 
   constructor(
     private fb: FormBuilder,

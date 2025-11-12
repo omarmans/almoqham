@@ -8,7 +8,14 @@
   <div class="main-cont">
     <div class="left-section">
       <div class="contact-box">
-        <h2 class="section-title">{{ currentTranslation.contactUs }}</h2>
+        <h2
+          class="section-title"
+          [ngClass]="
+            currentLang() === 'ar' ? 'tajawalExtraBold' : 'montserratBold'
+          "
+        >
+          {{ currentTranslation.contactUs }}
+        </h2>
         <form class="contact-form">
           <div class="form-cont">
             <i class="fa-solid fa-mobile-button"></i>
@@ -16,8 +23,11 @@
               type="tel"
               [placeholder]="currentTranslation.phonePlaceholder"
               class="form-input"
+              [ngClass]="
+                currentLang() === 'ar' ? 'cairoRegular' : 'poppinsRegular'
+              "
               readonly
-              value="966504484337"
+              [value]="phoneNum"
             />
           </div>
 
@@ -27,8 +37,11 @@
               type="tel"
               [placeholder]="currentTranslation.phonePlaceholder"
               class="form-input"
+              [ngClass]="
+                currentLang() === 'ar' ? 'cairoRegular' : 'poppinsRegular'
+              "
               readonly
-              value="966504484337"
+              [value]="phoneNum"
             />
           </div>
 
@@ -38,25 +51,41 @@
               type="email"
               [placeholder]="currentTranslation.phonePlaceholder"
               class="form-input"
+              [ngClass]="
+                currentLang() === 'ar' ? 'cairoRegular' : 'poppinsRegular'
+              "
               readonly
               value="{{ email }}"
             />
           </div>
 
-          <button type="button" (click)="openWhatsApp()" class="submit-btn">
+          <button
+            type="button"
+            (click)="openWhatsApp()"
+            class="submit-btn"
+            [ngClass]="currentLang() === 'ar' ? 'cairoMedium' : 'poppinsMedium'"
+          >
             {{ currentTranslation.btnContact }}
           </button>
         </form>
       </div>
 
       <div class="services-box">
-        <h2 class="section-title">{{ currentTranslation.ourServices }}</h2>
+        <h2
+          class="section-title"
+          [ngClass]="
+            currentLang() === 'ar' ? 'tajawalExtraBold' : 'montserratBold'
+          "
+        >
+          {{ currentTranslation.ourServices }}
+        </h2>
         <div class="services-tabs">
           @for (service of allServices; track service.id) {
           <button
             class="tab-btn"
             [class.active]="service.id === currentService()?.id"
             (click)="navigateToService(service.slug)"
+            [ngClass]="currentLang() === 'ar' ? 'cairoMedium' : 'poppinsMedium'"
           >
             {{ currentLang() === "ar" ? service.ar.title : service.en.title }}
           </button>
@@ -68,19 +97,48 @@
     <div class="right-section">
       <!-- Intro Paragraph -->
       <div class="intro-text">
-        <p>{{ currentTranslation.introText }}</p>
+        <p
+          [ngClass]="currentLang() === 'ar' ? 'cairoRegular' : 'poppinsRegular'"
+        >
+          {{ currentTranslation.introText }}
+        </p>
       </div>
 
       <div class="content-section">
-        <h2 class="main-heading">{{ currentTranslation.mainHeading }}</h2>
-        <p class="sub-heading">{{ currentTranslation.subHeading }}</p>
+        <h2
+          class="main-heading"
+          [ngClass]="
+            currentLang() === 'ar' ? 'tajawalExtraBold' : 'montserratBold'
+          "
+        >
+          {{ currentTranslation.mainHeading }}
+        </h2>
+        <p
+          class="sub-heading"
+          [ngClass]="
+            currentLang() === 'ar' ? 'cairoSemibold' : 'poppinsSemibold'
+          "
+        >
+          {{ currentTranslation.subHeading }}
+        </p>
 
         <div class="services-list">
           @for (service of currentTranslation.services; track $index) {
           <div class="service-item">
             <i class="fas fa-check-circle"></i>
-            <div class="service-content">
-              <strong>{{ service.title }}</strong>
+            <div
+              class="service-content"
+              [ngClass]="
+                currentLang() === 'ar' ? 'cairoRegular' : 'poppinsRegular'
+              "
+            >
+              <strong
+                [ngClass]="
+                  currentLang() === 'ar' ? 'cairoSemibold' : 'poppinsSemibold'
+                "
+              >
+                {{ service.title }}
+              </strong>
               {{ service.description }}
             </div>
           </div>
@@ -88,36 +146,73 @@
         </div>
 
         <div class="cta-wrapper">
-          <button (click)="openWhatsApp()" class="cta-btn">
+          <button
+            (click)="openWhatsApp()"
+            class="cta-btn"
+            [ngClass]="currentLang() === 'ar' ? 'cairoMedium' : 'poppinsMedium'"
+          >
             {{ currentTranslation.btnContact }}
           </button>
         </div>
       </div>
 
       <div class="content-section">
-        <h2 class="main-heading">{{ currentTranslation.whyUsTitle }}</h2>
+        <h2
+          class="main-heading"
+          [ngClass]="
+            currentLang() === 'ar' ? 'tajawalExtraBold' : 'montserratBold'
+          "
+        >
+          {{ currentTranslation.whyUsTitle }}
+        </h2>
 
         <div class="reasons-list">
           @for (point of currentTranslation.whyUsPoints; track $index) {
           <div class="reason-item">
             <i class="fas fa-check-circle"></i>
-            <span>{{ point }}</span>
+            <span
+              [ngClass]="
+                currentLang() === 'ar' ? 'cairoRegular' : 'poppinsRegular'
+              "
+            >
+              {{ point }}
+            </span>
           </div>
           }
         </div>
 
         <div class="cta-wrapper">
-          <button (click)="openWhatsApp()" class="cta-btn">
+          <button
+            (click)="openWhatsApp()"
+            class="cta-btn"
+            [ngClass]="currentLang() === 'ar' ? 'cairoMedium' : 'poppinsMedium'"
+          >
             {{ currentTranslation.btnContact }}
           </button>
         </div>
       </div>
 
       <div class="content-section final-cta">
-        <h2 class="main-heading">{{ currentTranslation.finalCtaTitle }}</h2>
-        <p class="cta-description">{{ currentTranslation.finalCtaDesc }}</p>
+        <h2
+          class="main-heading"
+          [ngClass]="
+            currentLang() === 'ar' ? 'tajawalExtraBold' : 'montserratBold'
+          "
+        >
+          {{ currentTranslation.finalCtaTitle }}
+        </h2>
+        <p
+          class="cta-description"
+          [ngClass]="currentLang() === 'ar' ? 'cairoRegular' : 'poppinsRegular'"
+        >
+          {{ currentTranslation.finalCtaDesc }}
+        </p>
         <div class="cta-wrapper">
-          <button (click)="openWhatsApp()" class="cta-btn-large">
+          <button
+            (click)="openWhatsApp()"
+            class="cta-btn-large"
+            [ngClass]="currentLang() === 'ar' ? 'cairoMedium' : 'poppinsMedium'"
+          >
             {{ currentTranslation.btnContact }}
           </button>
         </div>
@@ -127,6 +222,8 @@
 </div>
 } @else {
 <div class="loading-container">
-  <p>{{ currentLang() === "ar" ? "جاري التحميل..." : "Loading..." }}</p>
+  <p [ngClass]="currentLang() === 'ar' ? 'cairoRegular' : 'poppinsRegular'">
+    {{ currentLang() === "ar" ? "جاري التحميل..." : "Loading..." }}
+  </p>
 </div>
 }

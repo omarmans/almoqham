@@ -1,12 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { LanguageService } from '../../../../shared/services/language.service';
+import { NgClass } from '@angular/common';
 
 @Component({
   selector: 'app-main-pic',
-  imports: [],
+  imports: [NgClass],
   templateUrl: './main-pic.component.html',
   styleUrl: './main-pic.component.scss',
 })
 export class MainPicComponent {
+  private langService = inject(LanguageService);
+
+  currentLang = this.langService.currentLangSignal;
   attorneyData = {
     name: 'أحمد محمد السعيد',
     title: 'المحامي الاستشاري',

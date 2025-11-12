@@ -16,9 +16,21 @@
             <div class="image-overlay"></div>
           </div>
           <div class="blog-content">
-            <h4 class="blog-title">{{ getText(post.title) }}</h4>
+            <h4
+              class="blog-title"
+              [ngClass]="
+                currentLang() === 'ar' ? 'tajawalExtraBold' : 'montserratBold'
+              "
+            >
+              {{ getText(post.title) }}
+            </h4>
             <div class="blog-footer">
-              <span class="read-more">
+              <span
+                class="read-more"
+                [ngClass]="
+                  currentLang() === 'ar' ? 'cairoMedium' : 'poppinsMedium'
+                "
+              >
                 {{ currentLang() === "ar" ? "اقرأ المزيد" : "Read More" }}
 
                 <i

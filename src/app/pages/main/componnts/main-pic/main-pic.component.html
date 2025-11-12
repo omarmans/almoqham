@@ -6,12 +6,27 @@
     </div>
 
     <div class="profile-content">
-      <h2 class="attorney-name">أحمد محمد السعيد</h2>
-      <p class="attorney-title">المحامي الاستشاري</p>
+      <h2
+        class="attorney-name"
+        [ngClass]="
+          currentLang() === 'ar' ? 'tajawalExtraBold' : 'montserratBold'
+        "
+      >
+        أحمد محمد السعيد
+      </h2>
+      <p
+        class="attorney-title"
+        [ngClass]="currentLang() === 'ar' ? 'cairoSemibold' : 'poppinsSemibold'"
+      >
+        المحامي الاستشاري
+      </p>
 
       <div class="divider"></div>
 
-      <p class="attorney-bio">
+      <p
+        class="attorney-bio"
+        [ngClass]="currentLang() === 'ar' ? 'cairoRegular' : 'poppinsRegular'"
+      >
         يركز عمله على القضايا التجارية والشركات، مع خبرة تزيد عن 15 عاماً في
         تقديم الاستشارات القانونية والدفاع عن حقوق العملاء في مختلف المحاكم
         السعودية.

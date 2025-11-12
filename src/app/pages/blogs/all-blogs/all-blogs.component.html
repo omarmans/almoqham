@@ -3,10 +3,18 @@
 <section class="all-blogs-section">
   <div class="main-cont">
     <div class="section-header">
-      <h2 class="subtitle">
+      <h2
+        class="subtitle"
+        [ngClass]="currentLang() === 'ar' ? 'cairoSemibold' : 'poppinsSemibold'"
+      >
         {{ currentLang() === "ar" ? "مدونتنا" : "Our Blog" }}
       </h2>
-      <h3 class="main-title">
+      <h3
+        class="main-title"
+        [ngClass]="
+          currentLang() === 'ar' ? 'tajawalExtraBold' : 'montserratBold'
+        "
+      >
         {{
           currentLang() === "ar"
             ? "آخر المقالات القانونية"
@@ -25,9 +33,21 @@
             <div class="image-overlay"></div>
           </div>
           <div class="blog-content">
-            <h4 class="blog-title">{{ getText(post.title) }}</h4>
+            <h4
+              class="blog-title"
+              [ngClass]="
+                currentLang() === 'ar' ? 'cairoSemibold' : 'poppinsSemibold'
+              "
+            >
+              {{ getText(post.title) }}
+            </h4>
             <div class="blog-footer">
-              <span class="read-more">
+              <span
+                class="read-more"
+                [ngClass]="
+                  currentLang() === 'ar' ? 'cairoMedium' : 'poppinsMedium'
+                "
+              >
                 {{ currentLang() === "ar" ? "اقرأ المزيد" : "Read More" }}
                 <i
                   class="fa-solid fa-arrow-left"
