@@ -4,6 +4,7 @@ import { TranslatePipe } from '@ngx-translate/core';
 import { openWhatsApp } from '../../shared/funcations/whatapp';
 import { FormsModule, NgModel } from '@angular/forms';
 import { LanguageService } from '../../shared/services/language.service';
+import { email } from '../../shared/data/data';
 
 @Component({
   selector: 'app-legal-documentation-services',
@@ -16,6 +17,7 @@ export class LegalDocumentationServicesComponent {
   currentLang = this.langService.currentLangSignal;
   isHuman = false;
   openWhatsApp = openWhatsApp;
+  email = email;
 
   // إضافة computed signal للحصول على الترجمة الحالية
   get currentTranslation() {

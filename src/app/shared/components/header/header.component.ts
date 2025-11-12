@@ -10,6 +10,7 @@ import {
   NavigationEnd,
 } from '@angular/router';
 import { openWhatsApp } from '../../funcations/whatapp';
+import { email } from '../../data/data';
 
 @Component({
   selector: 'app-header',
@@ -21,6 +22,7 @@ import { openWhatsApp } from '../../funcations/whatapp';
 export class HeaderComponent implements OnInit, OnDestroy {
   currentLang = 'ar';
   menuOpen = false;
+  email = email;
   private langSubscription?: Subscription;
   private routerSubscription?: Subscription;
   openWhatsApp = openWhatsApp;

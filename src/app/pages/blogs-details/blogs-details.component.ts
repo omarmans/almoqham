@@ -4,6 +4,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { openWhatsApp } from '../../shared/funcations/whatapp';
 import { LanguageService } from '../../shared/services/language.service';
 import { MainHeaderComponent } from '../../shared/components/main-header/main-header.component';
+import { email } from '../../shared/data/data';
 
 @Component({
   selector: 'app-blogs-details',
@@ -18,7 +19,7 @@ export class BlogsDetailsComponent {
 
   currentLang = this.langService.currentLangSignal;
   openWhatsApp = openWhatsApp;
-
+  email = email;
   allServices = legalServicesTranslations;
   currentService = signal<any>(null);
 

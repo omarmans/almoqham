@@ -1,7 +1,14 @@
 <div class="main-header">
   <div class="main-cont">
     <div class="consultation-banner">
-      <h1 class="banner-title">{{ "HOME.TITLE" | translate }}</h1>
+      <h1
+        class="banner-title"
+        [ngClass]="
+          currentLang() === 'ar' ? 'tajawalExtraBold' : 'montserratBold'
+        "
+      >
+        {{ "HOME.TITLE" | translate }}
+      </h1>
       <button class="consultation-btn" (click)="openWhatsApp()">
         {{ "HOME.BUTTON" | translate }}
         <i class="fa-brands fa-whatsapp"></i>

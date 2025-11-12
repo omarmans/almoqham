@@ -8,6 +8,12 @@ module.exports = {
         MainbgColor: "#10443E",
         MaintTxtColors: "#edb970",
       },
+      fontFamily: {
+        tajawal: ["Tajawal", "sans-serif"],
+        cairo: ["Cairo", "sans-serif"],
+        montserrat: ["Montserrat", "sans-serif"],
+        poppins: ["Poppins", "sans-serif"],
+      },
     },
   },
   plugins: [],
