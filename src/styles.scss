@@ -430,26 +430,48 @@ body {
   }
 }
 
-.cairoFamily {
-  font-family: "Cairo", sans-serif;
-  font-weight: 400; /* ExtraBold */
-}
+// .cairoFamily {
+//   font-family: "Cairo", sans-serif;
+//   font-weight: 400; /* ExtraBold */
+// }
 
-.poppinsFamily {
-  font-family: "Poppins", sans-serif;
-  font-weight: 400; /* ExtraBold */
-}
+// .poppinsFamily {
+//   font-family: "Poppins", sans-serif;
+//   font-weight: 400; /* ExtraBold */
+// }
 
+// .tajawalExtraBold {
+//   font-family: "Tajawal";
+//   font-weight: 800; /* ExtraBold */
+// }
+
+// .montserratBold {
+//   font-family: "Montserrat", sans-serif;
+//   font-weight: 800; /* Bold */
+// }
+
+// .cairoSemibold {
+//   font-family: "Cairo", sans-serif;
+//   font-weight: 600;
+// }
+
+// .poppinsSemibold {
+//   font-family: "Poppins", sans-serif;
+//   font-weight: 600;
+// }
+
+// العناوين الرئيسية (Main Headings)
 .tajawalExtraBold {
-  font-family: "Tajawal";
-  font-weight: 800; /* ExtraBold */
+  font-family: "Tajawal", sans-serif;
+  font-weight: 800;
 }
 
 .montserratBold {
   font-family: "Montserrat", sans-serif;
-  font-weight: 800; /* Bold */
+  font-weight: 800;
 }
 
+// العناوين الفرعية (Sub Headings)
 .cairoSemibold {
   font-family: "Cairo", sans-serif;
   font-weight: 600;
@@ -458,4 +480,26 @@ body {
 .poppinsSemibold {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
+}
+
+// النصوص العادية (Regular Text)
+.cairoRegular {
+  font-family: "Cairo", sans-serif;
+  font-weight: 400;
+}
+
+.poppinsRegular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+
+// الأزرار / الأقواس (Buttons/Actions)
+.cairoMedium {
+  font-family: "Cairo", sans-serif;
+  font-weight: 500;
+}
+
+.poppinsMedium {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
 }
