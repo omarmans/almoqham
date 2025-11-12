@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { FormsModule } from '@angular/forms';
@@ -13,6 +13,8 @@ import { LanguageService } from '../../services/language.service';
   styleUrls: ['./footer.component.scss'],
 })
 export class FooterComponent {
+  langService = inject(LanguageService);
+  currentLang = this.langService.currentLangSignal;
   // Newsletter email input
   email = '';
 

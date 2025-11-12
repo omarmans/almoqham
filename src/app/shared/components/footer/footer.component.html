@@ -4,19 +4,40 @@
     <div class="footer-content">
       <!-- Column 1: Contact Information -->
       <div class="footer-column contact-column">
-        <h3 class="footer-title">{{ "FOOTER.CONTACT_INFO" | translate }}</h3>
+        <!-- العناوين الفرعية -->
+        <h3
+          class="footer-title"
+          [ngClass]="
+            currentLang() === 'ar' ? 'cairoSemibold' : 'poppinsSemibold'
+          "
+        >
+          {{ "FOOTER.CONTACT_INFO" | translate }}
+        </h3>
 
         <div class="contact-items">
           <!-- Office Address -->
           <div class="contact-item">
             <i class="fa-solid fa-location-dot"></i>
-            <p>{{ "FOOTER.ADDRESS" | translate }}</p>
+            <!-- النصوص العادية -->
+            <p
+              [ngClass]="
+                currentLang() === 'ar' ? 'cairoRegular' : 'poppinsRegular'
+              "
+            >
+              {{ "FOOTER.ADDRESS" | translate }}
+            </p>
           </div>
 
           <!-- Email Contact -->
           <div class="contact-item">
             <i class="fa-solid fa-envelope"></i>
-            <a [href]="'mailto:' + ('FOOTER.EMAIL' | translate)">
+            <!-- النصوص العادية -->
+            <a
+              [href]="'mailto:' + ('FOOTER.EMAIL' | translate)"
+              [ngClass]="
+                currentLang() === 'ar' ? 'cairoRegular' : 'poppinsRegular'
+              "
+            >
               {{ "FOOTER.EMAIL" | translate }}
             </a>
           </div>
@@ -24,7 +45,13 @@
           <!-- Phone Contact -->
           <div class="contact-item">
             <i class="fa-solid fa-mobile-button"></i>
-            <a [href]="'tel:' + ('FOOTER.PHONE' | translate)">
+            <!-- النصوص العادية -->
+            <a
+              [href]="'tel:' + ('FOOTER.PHONE' | translate)"
+              [ngClass]="
+                currentLang() === 'ar' ? 'cairoRegular' : 'poppinsRegular'
+              "
+            >
               {{ "FOOTER.PHONE" | translate }}
             </a>
           </div>
@@ -33,11 +60,25 @@
 
       <!-- Column 2: Our Services -->
       <div class="footer-column services-column">
-        <h3 class="footer-title">{{ "HEADER.OURSRV" | translate }}</h3>
+        <!-- العناوين الفرعية -->
+        <h3
+          class="footer-title"
+          [ngClass]="
+            currentLang() === 'ar' ? 'cairoSemibold' : 'poppinsSemibold'
+          "
+        >
+          {{ "HEADER.OURSRV" | translate }}
+        </h3>
 
         <ul class="footer-links">
           <li *ngFor="let service of services">
-            <a [routerLink]="service.route">
+            <!-- النصوص العادية -->
+            <a
+              [routerLink]="service.route"
+              [ngClass]="
+                currentLang() === 'ar' ? 'cairoRegular' : 'poppinsRegular'
+              "
+            >
               <i [class]="'fa-solid ' + service.icon"></i>
               {{ service.label | translate }}
             </a>
@@ -47,11 +88,25 @@
 
       <!-- Column 3: Useful Links -->
       <div class="footer-column links-column">
-        <h3 class="footer-title">{{ "FOOTER.USEFUL_LINKS" | translate }}</h3>
+        <!-- العناوين الفرعية -->
+        <h3
+          class="footer-title"
+          [ngClass]="
+            currentLang() === 'ar' ? 'cairoSemibold' : 'poppinsSemibold'
+          "
+        >
+          {{ "FOOTER.USEFUL_LINKS" | translate }}
+        </h3>
 
         <ul class="footer-links">
           <li *ngFor="let link of quickLinks">
-            <a [routerLink]="link.route">
+            <!-- النصوص العادية -->
+            <a
+              [routerLink]="link.route"
+              [ngClass]="
+                currentLang() === 'ar' ? 'cairoRegular' : 'poppinsRegular'
+              "
+            >
               {{ link.label | translate }}
             </a>
           </li>
@@ -60,7 +115,12 @@
 
       <!-- Column 4: Newsletter Subscription -->
       <!-- <div class="footer-column newsletter-column">
-        <h3 class="footer-title">{{ "FOOTER.NEWSLETTER" | translate }}</h3>
+        <h3 
+          class="footer-title"
+          [ngClass]="currentLang() === 'ar' ? 'cairoSemibold' : 'poppinsSemibold'"
+        >
+          {{ "FOOTER.NEWSLETTER" | translate }}
+        </h3>
 
         <form class="newsletter-form" (ngSubmit)="subscribeNewsletter()">
           <input
@@ -71,11 +131,13 @@
             required
             class="newsletter-input"
             aria-label="Newsletter email input"
+            [ngClass]="currentLang() === 'ar' ? 'cairoRegular' : 'poppinsRegular'"
           />
           <button
             type="submit"
             class="newsletter-btn"
             aria-label="Subscribe to newsletter"
+            [ngClass]="currentLang() === 'ar' ? 'cairoMedium' : 'poppinsMedium'"
           >
             {{ "FOOTER.SEND_BTN" | translate }}
           </button>
@@ -85,7 +147,13 @@
 
     <!-- Social Media Section -->
     <div class="social-section">
-      <h3 class="social-title">{{ "FOOTER.FOLLOW_US" | translate }}</h3>
+      <!-- العناوين الفرعية -->
+      <h3
+        class="social-title"
+        [ngClass]="currentLang() === 'ar' ? 'cairoSemibold' : 'poppinsSemibold'"
+      >
+        {{ "FOOTER.FOLLOW_US" | translate }}
+      </h3>
 
       <div class="social-links">
         <!-- Social Media Icons Loop -->
@@ -104,7 +172,8 @@
 
     <!-- Copyright Section -->
     <div class="copyright">
-      <p>
+      <!-- النصوص العادية -->
+      <p [ngClass]="currentLang() === 'ar' ? 'cairoRegular' : 'poppinsRegular'">
         {{ "FOOTER.COPYRIGHT" | translate }} © {{ currentYear }}
         {{ "FOOTER.COMPANY_NAME" | translate }}
       </p>
