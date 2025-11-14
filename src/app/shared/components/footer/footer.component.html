@@ -179,10 +179,14 @@
         {{ "FOOTER.COPYRIGHT" | translate }} © {{ currentYear }}
         {{ "FOOTER.COMPANY_NAME" | translate }}
       </p>
-      <p [ngClass]="currentLang() === 'ar' ? 'cairoRegular' : 'poppinsRegular'">
+      <a
+        href="https://ogmholdinggroup.github.io/OGM-HOLDING-GROUP/"
+        target="_blank"
+        [ngClass]="currentLang() === 'ar' ? 'cairoRegular' : 'poppinsRegular'"
+      >
         {{ "FOOTER.craftedWithLove" | translate }}
         <span class="text-MaintTxtColors">{{ "FOOTER.OGM" | translate }}</span>
-      </p>
+      </a>
     </div>
   </div>
 </footer>
