@@ -28,7 +28,8 @@
   "CTA": {
     "TITLE": "Got a Problem? Consult Us",
     "BUTTON": "Request Consultation",
-    "DONT": "Don't hesitate to contact us"
+    "DONT": "Don't hesitate to contact us",
+    "DES": "Our legal team is available 24/7 to provide accurate and reliable legal consultations tailored to your needs — whenever you need them."
   },
   "BLOG": {
     "SUBTITLE": "Latest Legal Articles & Insights",
@@ -36,7 +37,7 @@
   },
   "FOOTER": {
     "CONTACT_INFO": "Contact Information",
-    "ADDRESS": "Riyadh, Sheikh Abdul Latif bin Ibrahim Street 12652",
+    "ADDRESS": "Riyadh, Sheikh Abdul Latif Bin Ibrahim St., Saudi Arabia, Postal Code 12652",
     "EMAIL": "",
     "PHONE": "",
     "USEFUL_LINKS": "Useful Links",
