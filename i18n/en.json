@@ -46,7 +46,9 @@
     "SEND_BTN": "Send",
     "FOLLOW_US": "Follow Us",
     "COPYRIGHT": "All Rights Reserved",
-    "COMPANY_NAME": "Soliman Saleeh Almoqham"
+    "COMPANY_NAME": "Soliman Saleeh Almoqham",
+    "craftedWithLove": "With love crafted by",
+    "OGM": "OGM Holding Group"
   },
   "NEWSLETTER": {
     "SUCCESS": "Successfully subscribed to the newsletter!",
