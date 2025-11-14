@@ -14,7 +14,7 @@
     "INDIVIDUAL": "Individual Services",
     "NOTARY": "Notary Services",
     "COMPANY": "Company Services",
-    "BLOG": "Blog",
+    "BLOG": "Legal Blog",
     "FAQ": "FAQ",
     "CONTACT": "Contact Us",
     "OURSRV": "Our Services"
@@ -31,28 +31,28 @@
     "DONT": "Don't hesitate to contact us"
   },
   "BLOG": {
-    "SUBTITLE": "Our Official Blog",
-    "TITLE": "Latest Articles and Posts"
+    "SUBTITLE": "Latest Legal Articles & Insights",
+    "TITLE": "Stay informed with the latest legal updates, regulations, and insights that help you make confident and informed decisions."
   },
   "FOOTER": {
     "CONTACT_INFO": "Contact Information",
     "ADDRESS": "Riyadh, Sheikh Abdul Latif bin Ibrahim Street 12652",
-    "EMAIL": "info@aljurais-law.com",
-    "PHONE": "+966 50 777 8294",
+    "EMAIL": "",
+    "PHONE": "",
     "USEFUL_LINKS": "Useful Links",
     "NEWSLETTER": "Newsletter",
     "EMAIL_PLACEHOLDER": "Email Address",
     "SEND_BTN": "Send",
     "FOLLOW_US": "Follow Us",
     "COPYRIGHT": "All Rights Reserved",
-    "COMPANY_NAME": "Turki Al-Jurais Law Firm"
+    "COMPANY_NAME": "Soliman Saleeh Almoqham"
   },
   "NEWSLETTER": {
     "SUCCESS": "Successfully subscribed to the newsletter!",
     "ERROR": "Please enter a valid email address"
   },
   "SERVICES": {
-    "GOOD": "These are the services we offer you with the best quality.",
+    "GOOD": "Comprehensive legal solutions delivered with excellence and integrity.",
     "DETAIlS": "Service details",
     "ORDER": "Order now",
     "RULESSRV": "Our Legal Services",
