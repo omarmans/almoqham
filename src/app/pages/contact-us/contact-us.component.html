@@ -131,11 +131,11 @@
                   currentLang === 'ar' ? 'cairoRegular' : 'poppinsRegular'
                 "
               >
-                {{
-                  currentLang === "ar"
-                    ? "الرياض، شارع الشيخ عبداللطيف بن إبراهيم 12652"
-                    : "Riyadh, Sheikh Abdul Latif bin Ibrahim Street 12652"
-                }}
+                @if(currentLang === "ar"){
+                {{ addressAR }}
+                }@else {
+                {{ adressEN }}
+                }
               </p>
             </div>
           </div>

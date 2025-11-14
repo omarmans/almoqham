@@ -29,11 +29,11 @@ export class FooterComponent {
   quickLinks = [
     { label: 'HEADER.HOME', route: '/' },
     { label: 'HEADER.CONSULT', route: '/consult' },
-    { label: 'HEADER.INDIVIDUAL', route: '/individual' },
-    { label: 'HEADER.NOTARY', route: '/notary' },
-    { label: 'HEADER.COMPANY', route: '/company' },
-    { label: 'HEADER.BLOG', route: '/blog' },
-    { label: 'HEADER.FAQ', route: '/faq' },
+    // { label: 'HEADER.INDIVIDUAL', route: '/individual' },
+    // { label: 'HEADER.NOTARY', route: '/notary' },
+    // { label: 'HEADER.COMPANY', route: '/company' },
+    { label: 'HEADER.BLOG', route: '/blogs' },
+    { label: 'HEADER.FAQ', route: '/FAQ' },
     { label: 'HEADER.CONTACT', route: '/contact' },
   ];
 

@@ -18,8 +18,8 @@ export class ContactComponent {
     {
       icon: 'fa-regular fa-clock',
       text: {
-        ar: 'نحن في خدمتكم 24/7 - طوال أيام الأسبوع',
-        en: 'We are available 24/7 - All week long',
+        ar: '	 متاحون لخدمتكم 24/7 طوال أيام الأسبوع',
+        en: 'Available 24/7 — Every Day of the Week',
       },
       link: null,
     },
