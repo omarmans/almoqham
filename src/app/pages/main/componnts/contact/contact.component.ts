@@ -26,18 +26,18 @@ export class ContactComponent {
     {
       icon: 'fa-solid fa-mobile-button',
       text: {
-        ar: '+966 50 777 8294',
-        en: '+966 50 777 8294',
+        ar: '+966504484337',
+        en: '+966504484337',
       },
-      link: 'tel:+966507778294',
+      link: 'tel:+966504484337',
     },
     {
       icon: 'fa-solid fa-envelope',
       text: {
-        ar: 'info@aljurais-law.com',
-        en: 'info@aljurais-law.com',
+        ar: 'suleman@almughem.sa',
+        en: 'suleman@almughem.sa',
       },
-      link: 'mailto:info@aljurais-law.com',
+      link: 'mailto:suleman@almughem.sa',
     },
   ]);
   openWhatsApp = openWhatsApp;

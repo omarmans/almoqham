@@ -101,6 +101,7 @@ export const legalServicesTranslations = [
       firmName: 'Almoqham Law Firm',
     },
   },
+  // 2. قضايا وفض المنازعات التجارية (ID: 2)
   {
     id: 2,
     slug: 'commercial-disputes',
@@ -191,6 +192,8 @@ export const legalServicesTranslations = [
       firmName: 'Almoqham Law Firm',
     },
   },
+  // 3. خدمات التوثيق القانونية (ID: 1)
+
   {
     id: 3,
     slug: 'real-estate',

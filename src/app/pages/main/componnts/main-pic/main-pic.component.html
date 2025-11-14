@@ -1,4 +1,4 @@
-<section class="attorney-profile">
+<section class="attorney-profile" [attr.lang]="currentLang()">
   <div class="profile-container">
     <div class="profile-image">
       <img src="imgs/client.webp" alt="المحامي" />
@@ -12,13 +12,22 @@
           currentLang() === 'ar' ? 'tajawalExtraBold' : 'montserratBold'
         "
       >
-        أحمد محمد السعيد
+        @if (currentLang()==='ar') {
+        {{ attorneyData.name.ar }}
+        } @else {
+        {{ attorneyData.name.en }}
+        }
       </h2>
+
       <p
         class="attorney-title"
         [ngClass]="currentLang() === 'ar' ? 'cairoSemibold' : 'poppinsSemibold'"
       >
-        المحامي الاستشاري
+        @if (currentLang() === 'ar') {
+        {{ attorneyData.title.ar }}
+        } @else {
+        {{ attorneyData.title.en }}
+        }
       </p>
 
       <div class="divider"></div>
@@ -27,9 +36,11 @@
         class="attorney-bio"
         [ngClass]="currentLang() === 'ar' ? 'cairoRegular' : 'poppinsRegular'"
       >
-        يركز عمله على القضايا التجارية والشركات، مع خبرة تزيد عن 15 عاماً في
-        تقديم الاستشارات القانونية والدفاع عن حقوق العملاء في مختلف المحاكم
-        السعودية.
+        @if (currentLang() === 'ar') {
+        {{ attorneyData.bio.ar }}
+        } @else {
+        {{ attorneyData.bio.en }}
+        }
       </p>
 
       <div class="social-links">

@@ -5,23 +5,25 @@ export const SERVICES = signal<OurSERVICES[]>([
   {
     id: 1,
     title: 'خدمات تأسيس وتصفية الشركات',
-    titleEn: 'Company Formation and Liquidation Services',
-    description:
-      'تقدم شركة المشورة للمحاماة المساعدة الكاملة لتأسيس وتصفية الشركات في المملكة العربية السعودية، بما في ذلك إعداد العقود، والحصول على التراخيص، واستكمال الإجراءات القانونية والتنظيمية بكفاءة عالية.',
+    titleEn: 'Company Formation and Liquidation',
+    description: `نقدّم الدعم القانوني المتكامل لتأسيس وتصفيـة الشركات داخل المملكة العربية السعودية،
+بما في ذلك إعداد العقود واللوائح، والحصول على التراخيص، واستكمال الإجراءات القانونية والتنظيمية بكفاءة وشفافية.`,
     descriptionEn:
-      'Al-Mushawara Law Firm provides complete assistance in company formation and liquidation in Saudi Arabia, including contract preparation, licensing, and completing all legal and regulatory procedures efficiently.',
+      'We provide full legal support for establishing and liquidating companies in Saudi Arabia,including contract drafting, licensing, and completing all regulatory and procedural requirements with transparency and efficiency.',
     price: '3000 ريال سعودي',
     priceEn: '3000 SAR',
-    image: '3.jpeg',
+    image: '4.png',
   },
   {
     id: 2,
     title: 'خدمات تحصيل الديون وتنفيذ السندات',
-    titleEn: 'Debt Collection and Enforcement Services',
-    description:
-      'تساعد خدمات تحصيل الديون وسندات التنفيذ الأفراد والشركات على استرداد الديون المستحقة بطريقة قانونية وفعالة، وتشمل متابعة القضايا وإجراءات التنفيذ لضمان حقوق العملاء.',
-    descriptionEn:
-      'Debt collection and enforcement services assist individuals and companies in recovering outstanding debts legally and effectively, including case follow-ups and enforcement procedures to ensure clients’ rights.',
+    titleEn: 'Debt Collection & Enforcement of Bonds',
+    description: `نقدّم حلولًا احترافية لاسترداد الديون المستحقة للأفراد والشركات بطرق قانونية فعالة،
+ونتولى متابعة القضايا وإجراءات التنفيذ حتى ضمان كامل حقوق العملاء.
+`,
+    descriptionEn: `Our team assists individuals and corporations in recovering outstanding debts through legal and efficient procedures,
+covering case follow-ups and enforcement actions to secure our clients’ rights
+`,
     price: '1500 ريال سعودي',
     priceEn: '1500 SAR',
     image: '2.jpeg',
@@ -30,10 +32,12 @@ export const SERVICES = signal<OurSERVICES[]>([
     id: 3,
     title: 'خدمات الاستثمار الأجنبي',
     titleEn: 'Foreign Investment Services',
-    description:
-      'تقدم شركة المشورة للمحاماة خدمات متكاملة للمستثمرين الأجانب الراغبين في الاستثمار في المملكة العربية السعودية، وتشمل تأسيس الكيانات القانونية، والحصول على التراخيص، وتقديم الاستشارات النظامية لتحقيق بيئة استثمارية آمنة ومتوافقة مع الأنظمة المحلية.',
-    descriptionEn:
-      'Al-Mushawara Law Firm provides comprehensive services for foreign investors seeking to invest in Saudi Arabia, including establishing legal entities, obtaining licenses, and providing regulatory advice to ensure a secure and compliant investment environment.',
+    description: `نوفّر للمستثمرين الأجانب خدمات قانونية متكاملة لتأسيس الكيانات الاستثمارية داخل المملكة،
+بما في ذلك الحصول على التراخيص، وإعداد الهياكل القانونية، وتقديم الاستشارات التنظيمية لتحقيق بيئة استثمارية آمنة ومستقرة.
+`,
+    descriptionEn: `We offer integrated legal solutions for foreign investors looking to establish their businesses in Saudi Arabia,
+covering licensing, legal structuring, and regulatory consulting to ensure a secure and thriving investment environment.
+`,
     price: '5000 ريال سعودي',
     priceEn: '5000 SAR',
     image: '3.jpeg',

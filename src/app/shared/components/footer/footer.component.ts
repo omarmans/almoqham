@@ -4,6 +4,7 @@ import { RouterLink } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { TranslateModule } from '@ngx-translate/core';
 import { LanguageService } from '../../services/language.service';
+import { email, phoneNum } from '../../data/data';
 
 @Component({
   selector: 'app-footer',
@@ -15,6 +16,9 @@ import { LanguageService } from '../../services/language.service';
 export class FooterComponent {
   langService = inject(LanguageService);
   currentLang = this.langService.currentLangSignal;
+  myEmail = email;
+  phoneNum = phoneNum;
+
   // Newsletter email input
   email = '';
 
