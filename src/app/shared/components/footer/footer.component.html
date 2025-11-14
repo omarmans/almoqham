@@ -179,6 +179,10 @@
         {{ "FOOTER.COPYRIGHT" | translate }} © {{ currentYear }}
         {{ "FOOTER.COMPANY_NAME" | translate }}
       </p>
+      <p [ngClass]="currentLang() === 'ar' ? 'cairoRegular' : 'poppinsRegular'">
+        {{ "FOOTER.craftedWithLove" | translate }}
+        <span class="text-MaintTxtColors">{{ "FOOTER.OGM" | translate }}</span>
+      </p>
     </div>
   </div>
 </footer>
