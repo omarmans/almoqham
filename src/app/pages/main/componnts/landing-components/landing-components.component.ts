@@ -60,6 +60,20 @@ export class LandingComponentsComponent {
         en: 'Learn More',
       },
     },
+    {
+      title: {
+        ar: 'خصوصية بياناتك أولويتنا',
+        en: 'Your Data Privacy Is Our Priority',
+      },
+      subtitle: {
+        ar: 'نحرص دائمًا على حماية حقوق العملاء وتقديم ما يخدم مصالحهم بأعلى مستويات الأمان والسرية.',
+        en: 'We always ensure the protection of our clients’ rights and provide services that prioritize their interests with the highest levels of security and confidentiality.',
+      },
+      button: {
+        ar: 'اكتشف المزيد',
+        en: 'Discover More',
+      },
+    },
   ]);
 
   getText(text: { ar: string; en: string }): string {
