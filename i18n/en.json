@@ -14,13 +14,14 @@
     "INDIVIDUAL": "Individual Services",
     "NOTARY": "Notary Services",
     "COMPANY": "Company Services",
-    "BLOG": "Legal Blog",
+    "BLOG": " Blog",
     "FAQ": "FAQ",
     "CONTACT": "Contact Us",
-    "OURSRV": "Our Services"
+    "OURSRV": "Our Services",
+    "ABOUT": "About US"
   },
   "HOME": {
-    "TITLE": "Your Legal Consultation at the Click of a Button",
+    "TITLE": "Dr. Sulaiman Al-Muqham Law Firm: Accuracy in work... Security for your data... Speed ​​in completion",
     "SUBTITLE": "We are at your service 24/7 – all week long.",
     "BUTTON": "Book Your Consultation",
     "LEGAL_SERVICES": "Legal Services for Everyone!"
