@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { TranslateModule } from '@ngx-translate/core';
 import { LanguageService } from '../../services/language.service';
 import { email, phoneNum } from '../../data/data';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-footer',
@@ -15,9 +16,15 @@ import { email, phoneNum } from '../../data/data';
 })
 export class FooterComponent {
   langService = inject(LanguageService);
+  private sanitizer = inject(DomSanitizer);
+
   currentLang = this.langService.currentLangSignal;
   myEmail = email;
   phoneNum = phoneNum;
+
+  // Google Maps data
+  mapLink = 'https://maps.app.goo.gl/H3bXb7k1ZMZWv1jq7';
+  mapEmbedUrl: SafeResourceUrl;
 
   // Newsletter email input
   email = '';
@@ -25,13 +32,10 @@ export class FooterComponent {
   // Current year for copyright
   currentYear = new Date().getFullYear();
 
-  // Quick navigation links - يتم ترجمتها من ملف الترجمة
+  // Quick navigation links
   quickLinks = [
     { label: 'HEADER.HOME', route: '/' },
     { label: 'HEADER.CONSULT', route: '/consult' },
-    // { label: 'HEADER.INDIVIDUAL', route: '/individual' },
-    // { label: 'HEADER.NOTARY', route: '/notary' },
-    // { label: 'HEADER.COMPANY', route: '/company' },
     { label: 'HEADER.BLOG', route: '/blogs' },
     { label: 'HEADER.FAQ', route: '/FAQ' },
     { label: 'HEADER.CONTACT', route: '/contact' },
@@ -72,7 +76,12 @@ export class FooterComponent {
     },
   ];
 
-  constructor(public languageService: LanguageService) {}
+  constructor(public languageService: LanguageService) {
+    // Sanitize the Google Maps embed URL
+    const embedUrl =
+      'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3625.2657750822336!2d46.79085062485387!3d24.683388878045292!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f073a19feb433%3A0x1c8ef200b1595679!2z2LTYsdmD2Kkg2LPZhNmK2YXYp9mGINi12KfZhNitINin2YTZhdmC2K3ZhSDZhNmE2YXYrdin2YXYp9ipINmI2KfZhNin2LPYqti02KfYsdin2Kog2KfZhNmC2KfZhtmI2YbZitipINmI2KfZhNiq2YjYq9mK2YI!5e0!3m2!1sar!2ssa!4v1763723579661!5m2!1sar!2ssa';
+    this.mapEmbedUrl = this.sanitizer.bypassSecurityTrustResourceUrl(embedUrl);
+  }
 
   /**
    * Handle newsletter subscription

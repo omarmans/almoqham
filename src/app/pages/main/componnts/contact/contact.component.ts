@@ -39,6 +39,14 @@ export class ContactComponent {
       },
       link: 'mailto:suleman@almughem.sa',
     },
+    {
+      icon: 'fa-solid fa-location-dot',
+      text: {
+        ar: 'طريق الأمير سعد بن عبدالرحمن الأول الفرعي، حي الروابي، الرياض 14215',
+        en: 'Prince Saad Bin Abdulrahman Al Awwal Branch Rd, Ar Rawabi, Riyadh 14215',
+      },
+      link: 'https://maps.app.goo.gl/H3bXb7k1ZMZWv1jq7',
+    },
   ]);
   openWhatsApp = openWhatsApp;
   getText(text: { ar: string; en: string }): string {

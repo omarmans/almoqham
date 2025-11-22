@@ -17,6 +17,7 @@ import {
   PhoneNumberFormat,
 } from 'ngx-intl-tel-input';
 import { MainHeaderComponent } from '../../shared/components/main-header/main-header.component';
+import { GoogleMapComponent } from '../../shared/components/google-map/google-map.component';
 import { adressAR, adressEN, email, phoneNum } from '../../shared/data/data';
 import { openWhatsApp } from '../../shared/funcations/whatapp';
 
@@ -28,6 +29,7 @@ import { openWhatsApp } from '../../shared/funcations/whatapp';
     ReactiveFormsModule,
     CommonModule,
     MainHeaderComponent,
+    GoogleMapComponent, // Add the new component
   ],
   templateUrl: './contact-us.component.html',
   styleUrls: ['./contact-us.component.scss'],
@@ -36,14 +38,16 @@ export class ContactUsComponent implements OnInit, OnDestroy {
   CountryISO = CountryISO;
   SearchCountryField = SearchCountryField;
   PhoneNumberFormat = PhoneNumberFormat;
+
   email = email;
   addressAR = adressAR;
   adressEN = adressEN;
+  phoneNum = phoneNum;
   openWhatApp = openWhatsApp;
+
   contactForm!: FormGroup;
   currentLang: string = 'ar';
   private langSubscription?: Subscription;
-  phoneNum = phoneNum;
 
   constructor(
     private fb: FormBuilder,

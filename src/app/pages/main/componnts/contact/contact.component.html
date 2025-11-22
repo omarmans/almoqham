@@ -19,6 +19,7 @@
             *ngIf="item.link; else plainText"
             [href]="item.link"
             class="info-text"
+            target="_blank"
           >
             {{ getText(item.text) }}
           </a>

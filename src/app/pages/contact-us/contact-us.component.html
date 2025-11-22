@@ -1,11 +1,11 @@
 <app-main-header [pageTitle]="'HEADER.CONTACT'" [showPath]="true" />
 
 <section class="min-h-screen bg-gray-50 py-16 px-4">
-  <div class="max-w-7xl mx-auto flex items-center justify-center">
-    <div class="flex items-center justify-center gap-8 lg:gap-12">
+  <div class="max-w-7xl mx-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
       <!-- Right Side - Contact Info -->
-      <div class="order-1">
-        <!-- Main Title - العناوين الرئيسية -->
+      <div class="order-2 lg:order-1">
+        <!-- Main Title -->
         <div class="mb-8">
           <h2
             class="text-3xl md:text-4xl lg:text-5xl font-bold text-[#1a3d3d] leading-tight mb-6"
@@ -16,16 +16,10 @@
             "
             [innerHTML]="
               currentLang === 'ar'
-                ? 'هل لديك سؤال؟ <br/> تواصل مع الشركة في أي وقت من خلال أرقام الإتصال و سيتواصل معك أحد موظفينا'
-                : 'Do you have a question?<br/> Contact the company at any time by our numbers and one of our staff will contact you or you can use one of the two methods below'
+                ? 'هل تحتاج إلى استشارة قانونية أو مساعدة في إجراء قانوني؟'
+                : 'Do you need legal consultation or assistance with a legal procedure?'
             "
-          >
-            <!-- {{
-              currentLang === "ar"
-                ? "هل لديك سؤال؟ تواصل مع الشركة في أي وقت من خلال ملء النموذج و سيتواصل معك احد موظفينا او يمكنك إستخدام احدى الوسيلتين في الاسفل"
-                : "Do you have a question? Contact the company at any time by filling out the form and one of our staff will contact you or you can use one of the two methods below"
-            }} -->
-          </h2>
+          ></h2>
         </div>
 
         <!-- Contact Details Grid -->
@@ -59,7 +53,6 @@
               [class.text-right]="currentLang === 'ar'"
               [class.text-left]="currentLang === 'en'"
             >
-              <!-- العناوين الفرعية -->
               <h3
                 class="text-lg font-bold text-[#1a3d3d] mb-2"
                 [ngClass]="
@@ -68,7 +61,6 @@
               >
                 {{ currentLang === "ar" ? "ارقام الهواتف" : "Phone Numbers" }}
               </h3>
-              <!-- النصوص العادية -->
               <p
                 class="text-gray-600 font-medium"
                 [ngClass]="
@@ -115,7 +107,6 @@
               [class.text-right]="currentLang === 'ar'"
               [class.text-left]="currentLang === 'en'"
             >
-              <!-- العناوين الفرعية -->
               <h3
                 class="text-lg font-bold text-[#1a3d3d] mb-2"
                 [ngClass]="
@@ -124,7 +115,6 @@
               >
                 {{ currentLang === "ar" ? "موقع الشركة" : "Company Location" }}
               </h3>
-              <!-- النصوص العادية -->
               <p
                 class="text-gray-600 leading-relaxed"
                 [ngClass]="
@@ -169,7 +159,6 @@
               [class.text-right]="currentLang === 'ar'"
               [class.text-left]="currentLang === 'en'"
             >
-              <!-- العناوين الفرعية -->
               <h3
                 class="text-lg font-bold text-[#1a3d3d] mb-2"
                 [ngClass]="
@@ -178,7 +167,6 @@
               >
                 {{ currentLang === "ar" ? "البريد الالكتروني" : "Email" }}
               </h3>
-              <!-- النصوص العادية -->
               <p
                 class="text-gray-600 font-medium break-all"
                 [ngClass]="
@@ -219,7 +207,6 @@
               [class.text-right]="currentLang === 'ar'"
               [class.text-left]="currentLang === 'en'"
             >
-              <!-- العناوين الفرعية -->
               <h3
                 class="text-lg font-bold text-[#1a3d3d] mb-2"
                 [ngClass]="
@@ -228,7 +215,6 @@
               >
                 {{ currentLang === "ar" ? "ساعات العمل" : "Working Hours" }}
               </h3>
-              <!-- النصوص العادية -->
               <p
                 class="text-gray-600 leading-relaxed"
                 [ngClass]="
@@ -245,15 +231,15 @@
           </div>
         </div>
 
-        <!-- Action Buttons - الأزرار / الأقواس -->
+        <!-- Action Buttons -->
         <div
-          class="flex flex-col sm:flex-row gap-4"
+          class="flex flex-col sm:flex-row gap-4 mb-8"
           [class.flex-row-reverse]="currentLang === 'ar'"
         >
           <a
             (click)="openWhatApp()"
             target="_blank"
-            class="flex-1 px-6 py-4 bg-[#d4af6a] hover:bg-[#c49d58] text-[#1a3d3d] font-bold rounded-lg transition-all duration-300 transform hover:scale-105 text-center shadow-lg"
+            class="flex-1 px-6 py-4 bg-[#d4af6a] hover:bg-[#c49d58] text-[#1a3d3d] font-bold rounded-lg transition-all duration-300 transform hover:scale-105 text-center shadow-lg cursor-pointer"
             [ngClass]="currentLang === 'ar' ? 'cairoMedium' : 'poppinsMedium'"
           >
             {{
@@ -265,7 +251,7 @@
           <a
             (click)="openWhatApp()"
             target="_blank"
-            class="flex-1 px-6 py-4 bg-[#1a3d3d] hover:bg-[#2a4d4d] text-white font-bold rounded-lg transition-all duration-300 transform hover:scale-105 text-center shadow-lg"
+            class="flex-1 px-6 py-4 bg-[#1a3d3d] hover:bg-[#2a4d4d] text-white font-bold rounded-lg transition-all duration-300 transform hover:scale-105 text-center shadow-lg cursor-pointer"
             [ngClass]="currentLang === 'ar' ? 'cairoMedium' : 'poppinsMedium'"
           >
             {{
@@ -276,240 +262,17 @@
           </a>
         </div>
       </div>
-      <!-- 
+
+      <!-- Left Side - Google Map -->
       <div class="order-1 lg:order-2">
-        <div class="bg-white rounded-2xl shadow-2xl p-8 md:p-10">
-          <form
-            class="space-y-6"
-            [formGroup]="contactForm"
-            (ngSubmit)="onSubmit()"
-            novalidate
-          >
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div>
-                <label
-                  class="block text-sm font-semibold text-[#1a3d3d] mb-2"
-                  [class.text-right]="currentLang === 'ar'"
-                  [class.text-left]="currentLang === 'en'"
-                  [ngClass]="currentLang === 'ar' ? 'cairoSemibold' : 'poppinsSemibold'"
-                >
-                  {{ currentLang === "ar" ? "رقم الهاتف *" : "Phone Number *" }}
-                </label>
-                <ngx-intl-tel-input
-                  [preferredCountries]="[
-                    CountryISO.SaudiArabia,
-                    CountryISO.Egypt,
-                    CountryISO.UnitedArabEmirates
-                  ]"
-                  [enableAutoCountrySelect]="true"
-                  [searchCountryField]="[
-                    SearchCountryField.Iso2,
-                    SearchCountryField.Name
-                  ]"
-                  [selectFirstCountry]="false"
-                  [phoneValidation]="true"
-                  [separateDialCode]="true"
-                  formControlName="phone"
-                ></ngx-intl-tel-input>
-                <small
-                  *ngIf="f['phone'].invalid && f['phone'].touched"
-                  class="text-red-500 text-xs block mt-1"
-                  [class.text-right]="currentLang === 'ar'"
-                  [class.text-left]="currentLang === 'en'"
-                  [ngClass]="currentLang === 'ar' ? 'cairoRegular' : 'poppinsRegular'"
-                >
-                  {{
-                    currentLang === "ar"
-                      ? "رقم الهاتف مطلوب أو غير صالح"
-                      : "Phone number is required or invalid"
-                  }}
-                </small>
-              </div>
-
-              <div>
-                <label
-                  class="block text-sm font-semibold text-[#1a3d3d] mb-2"
-                  [class.text-right]="currentLang === 'ar'"
-                  [class.text-left]="currentLang === 'en'"
-                  [ngClass]="currentLang === 'ar' ? 'cairoSemibold' : 'poppinsSemibold'"
-                >
-                  {{ currentLang === "ar" ? "الاسم الكامل *" : "Full Name *" }}
-                </label>
-                <input
-                  type="text"
-                  formControlName="fullName"
-                  class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-[#d4af6a] focus:outline-none transition-colors duration-200"
-                  [class.text-right]="currentLang === 'ar'"
-                  [class.text-left]="currentLang === 'en'"
-                  [ngClass]="{
-                    'border-red-500':
-                      f['fullName'].invalid && f['fullName'].touched
-                  }"
-                />
-                <small
-                  *ngIf="f['fullName'].invalid && f['fullName'].touched"
-                  class="text-red-500 text-xs block mt-1"
-                  [class.text-right]="currentLang === 'ar'"
-                  [class.text-left]="currentLang === 'en'"
-                  [ngClass]="currentLang === 'ar' ? 'cairoRegular' : 'poppinsRegular'"
-                >
-                  {{
-                    currentLang === "ar"
-                      ? "الاسم مطلوب"
-                      : "Full name is required"
-                  }}
-                </small>
-              </div>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div>
-                <label
-                  class="block text-sm font-semibold text-[#1a3d3d] mb-2"
-                  [class.text-right]="currentLang === 'ar'"
-                  [class.text-left]="currentLang === 'en'"
-                  [ngClass]="currentLang === 'ar' ? 'cairoSemibold' : 'poppinsSemibold'"
-                >
-                  {{ currentLang === "ar" ? "نوع القضية *" : "Case Type *" }}
-                </label>
-                <input
-                  type="text"
-                  formControlName="caseType"
-                  class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-[#d4af6a] focus:outline-none transition-colors duration-200"
-                  [class.text-right]="currentLang === 'ar'"
-                  [class.text-left]="currentLang === 'en'"
-                  [ngClass]="{
-                    'border-red-500':
-                      f['caseType'].invalid && f['caseType'].touched
-                  }"
-                />
-                <small
-                  *ngIf="f['caseType'].invalid && f['caseType'].touched"
-                  class="text-red-500 text-xs block mt-1"
-                  [class.text-right]="currentLang === 'ar'"
-                  [class.text-left]="currentLang === 'en'"
-                  [ngClass]="currentLang === 'ar' ? 'cairoRegular' : 'poppinsRegular'"
-                >
-                  {{
-                    currentLang === "ar"
-                      ? "نوع القضية مطلوب"
-                      : "Case type is required"
-                  }}
-                </small>
-              </div>
-
-              <div>
-                <label
-                  class="block text-sm font-semibold text-[#1a3d3d] mb-2"
-                  [class.text-right]="currentLang === 'ar'"
-                  [class.text-left]="currentLang === 'en'"
-                  [ngClass]="currentLang === 'ar' ? 'cairoSemibold' : 'poppinsSemibold'"
-                >
-                  {{ currentLang === "ar" ? "البريد الإلكتروني *" : "Email *" }}
-                </label>
-                <input
-                  type="email"
-                  formControlName="email"
-                  class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-[#d4af6a] focus:outline-none transition-colors duration-200"
-                  [class.text-right]="currentLang === 'ar'"
-                  [class.text-left]="currentLang === 'en'"
-                  [ngClass]="{
-                    'border-red-500': f['email'].invalid && f['email'].touched
-                  }"
-                />
-                <small
-                  *ngIf="f['email'].invalid && f['email'].touched"
-                  class="text-red-500 text-xs block mt-1"
-                  [class.text-right]="currentLang === 'ar'"
-                  [class.text-left]="currentLang === 'en'"
-                  [ngClass]="currentLang === 'ar' ? 'cairoRegular' : 'poppinsRegular'"
-                >
-                  {{
-                    currentLang === "ar"
-                      ? "يرجى إدخال بريد إلكتروني صالح"
-                      : "Please enter a valid email"
-                  }}
-                </small>
-              </div>
-            </div>
-
-            <div>
-              <label
-                class="block text-sm font-semibold text-[#1a3d3d] mb-2"
-                [class.text-right]="currentLang === 'ar'"
-                [class.text-left]="currentLang === 'en'"
-                [ngClass]="currentLang === 'ar' ? 'cairoSemibold' : 'poppinsSemibold'"
-              >
-                {{ currentLang === "ar" ? "الموضوع *" : "Subject *" }}
-              </label>
-              <input
-                type="text"
-                formControlName="subject"
-                class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-[#d4af6a] focus:outline-none transition-colors duration-200"
-                [class.text-right]="currentLang === 'ar'"
-                [class.text-left]="currentLang === 'en'"
-                [ngClass]="{
-                  'border-red-500': f['subject'].invalid && f['subject'].touched
-                }"
-              />
-              <small
-                *ngIf="f['subject'].invalid && f['subject'].touched"
-                class="text-red-500 text-xs block mt-1"
-                [class.text-right]="currentLang === 'ar'"
-                [class.text-left]="currentLang === 'en'"
-                [ngClass]="currentLang === 'ar' ? 'cairoRegular' : 'poppinsRegular'"
-              >
-                {{
-                  currentLang === "ar" ? "الموضوع مطلوب" : "Subject is required"
-                }}
-              </small>
-            </div>
-
-            <div>
-              <label
-                class="block text-sm font-semibold text-[#1a3d3d] mb-2"
-                [class.text-right]="currentLang === 'ar'"
-                [class.text-left]="currentLang === 'en'"
-                [ngClass]="currentLang === 'ar' ? 'cairoSemibold' : 'poppinsSemibold'"
-              >
-                {{ currentLang === "ar" ? "الرسالة *" : "Message *" }}
-              </label>
-              <textarea
-                rows="5"
-                formControlName="message"
-                class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-[#d4af6a] focus:outline-none transition-colors duration-200 resize-none"
-                [class.text-right]="currentLang === 'ar'"
-                [class.text-left]="currentLang === 'en'"
-                [ngClass]="{
-                  'border-red-500': f['message'].invalid && f['message'].touched
-                }"
-              ></textarea>
-              <small
-                *ngIf="f['message'].invalid && f['message'].touched"
-                class="text-red-500 text-xs block mt-1"
-                [class.text-right]="currentLang === 'ar'"
-                [class.text-left]="currentLang === 'en'"
-                [ngClass]="currentLang === 'ar' ? 'cairoRegular' : 'poppinsRegular'"
-              >
-                {{
-                  currentLang === "ar"
-                    ? "الرسالة مطلوبة"
-                    : "Message is required"
-                }}
-              </small>
-            </div>
-
-            <button
-              type="submit"
-              class="w-full py-4 bg-[#d4af6a] hover:bg-[#c49d58] text-[#1a3d3d] font-bold rounded-lg transition-all duration-300 transform hover:scale-[1.02] shadow-lg text-lg disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
-              [disabled]="contactForm.invalid"
-              [ngClass]="currentLang === 'ar' ? 'cairoMedium' : 'poppinsMedium'"
-            >
-              {{ currentLang === "ar" ? "إرسال الرسالة" : "Send Message" }}
-            </button>
-          </form>
-        </div>
-      </div> -->
+        <app-google-map
+          [height]="500"
+          [showTitle]="true"
+          [showAddress]="true"
+          [showDirectLink]="true"
+          [variant]="'full'"
+        ></app-google-map>
+      </div>
     </div>
   </div>
 </section>

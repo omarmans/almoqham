@@ -2,9 +2,8 @@
   <div class="main-cont">
     <!-- Main Footer Content Grid -->
     <div class="footer-content">
-      <!-- Column 1: Contact Information -->
+      <!-- Column 1: Contact Information with Map -->
       <div class="footer-column contact-column">
-        <!-- العناوين الفرعية -->
         <h3
           class="footer-title"
           [ngClass]="
@@ -15,30 +14,45 @@
         </h3>
 
         <div class="contact-items">
-          <!-- Office Address -->
+          <!-- Office Address with Map Link -->
           <div class="contact-item">
             <i class="fa-solid fa-location-dot"></i>
-            <!-- النصوص العادية -->
-            <p
-              [ngClass]="
-                currentLang() === 'ar' ? 'cairoRegular' : 'poppinsRegular'
-              "
-            >
-              {{ "FOOTER.ADDRESS" | translate }}
-            </p>
+            <div class="contact-text">
+              <p
+                [ngClass]="
+                  currentLang() === 'ar' ? 'cairoRegular' : 'poppinsRegular'
+                "
+              >
+                {{ "FOOTER.ADDRESS" | translate }}
+              </p>
+              <a
+                [href]="mapLink"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="map-link"
+                [ngClass]="
+                  currentLang() === 'ar' ? 'cairoMedium' : 'poppinsMedium'
+                "
+              >
+                <i class="fa-solid fa-map-location-dot"></i>
+                {{
+                  currentLang() === "ar"
+                    ? "عرض الموقع على الخريطة"
+                    : "View on Map"
+                }}
+              </a>
+            </div>
           </div>
 
           <!-- Email Contact -->
           <div class="contact-item">
             <i class="fa-solid fa-envelope"></i>
-            <!-- النصوص العادية -->
             <a
-              [href]="'mailto:' + ('FOOTER.EMAIL' | translate)"
+              [href]="'mailto:' + myEmail"
               [ngClass]="
                 currentLang() === 'ar' ? 'cairoRegular' : 'poppinsRegular'
               "
             >
-              <!-- {{ "FOOTER.EMAIL" | translate }} -->
               {{ myEmail }}
             </a>
           </div>
@@ -46,23 +60,47 @@
           <!-- Phone Contact -->
           <div class="contact-item">
             <i class="fa-solid fa-mobile-button"></i>
-            <!-- النصوص العادية -->
             <a
-              [href]="'tel:' + ('FOOTER.PHONE' | translate)"
+              [href]="'tel:' + phoneNum"
               [ngClass]="
                 currentLang() === 'ar' ? 'cairoRegular' : 'poppinsRegular'
               "
             >
-              <!-- {{ "FOOTER.PHONE" | translate }} -->
               {{ phoneNum }}
             </a>
           </div>
+        </div>
+
+        <!-- Google Map Embed -->
+        <div class="map-container">
+          <iframe
+            [src]="mapEmbedUrl"
+            width="100%"
+            height="250"
+            style="border: 0; border-radius: 12px"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="موقع المكتب على الخريطة"
+          ></iframe>
+          <a
+            [href]="mapLink"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="map-overlay"
+            [attr.aria-label]="
+              currentLang() === 'ar'
+                ? 'فتح الموقع في خرائط جوجل'
+                : 'Open location in Google Maps'
+            "
+          >
+            <i class="fa-solid fa-up-right-from-square"></i>
+          </a>
         </div>
       </div>
 
       <!-- Column 2: Our Services -->
       <div class="footer-column services-column">
-        <!-- العناوين الفرعية -->
         <h3
           class="footer-title"
           [ngClass]="
@@ -74,7 +112,6 @@
 
         <ul class="footer-links">
           <li *ngFor="let service of services">
-            <!-- النصوص العادية -->
             <a
               [routerLink]="service.route"
               [ngClass]="
@@ -90,7 +127,6 @@
 
       <!-- Column 3: Useful Links -->
       <div class="footer-column links-column">
-        <!-- العناوين الفرعية -->
         <h3
           class="footer-title"
           [ngClass]="
@@ -102,7 +138,6 @@
 
         <ul class="footer-links">
           <li *ngFor="let link of quickLinks">
-            <!-- النصوص العادية -->
             <a
               [routerLink]="link.route"
               [ngClass]="
@@ -114,42 +149,10 @@
           </li>
         </ul>
       </div>
-
-      <!-- Column 4: Newsletter Subscription -->
-      <!-- <div class="footer-column newsletter-column">
-        <h3 
-          class="footer-title"
-          [ngClass]="currentLang() === 'ar' ? 'cairoSemibold' : 'poppinsSemibold'"
-        >
-          {{ "FOOTER.NEWSLETTER" | translate }}
-        </h3>
-
-        <form class="newsletter-form" (ngSubmit)="subscribeNewsletter()">
-          <input
-            type="email"
-            [(ngModel)]="email"
-            name="email"
-            [placeholder]="'FOOTER.EMAIL_PLACEHOLDER' | translate"
-            required
-            class="newsletter-input"
-            aria-label="Newsletter email input"
-            [ngClass]="currentLang() === 'ar' ? 'cairoRegular' : 'poppinsRegular'"
-          />
-          <button
-            type="submit"
-            class="newsletter-btn"
-            aria-label="Subscribe to newsletter"
-            [ngClass]="currentLang() === 'ar' ? 'cairoMedium' : 'poppinsMedium'"
-          >
-            {{ "FOOTER.SEND_BTN" | translate }}
-          </button>
-        </form>
-      </div> -->
     </div>
 
     <!-- Social Media Section -->
     <div class="social-section">
-      <!-- العناوين الفرعية -->
       <h3
         class="social-title"
         [ngClass]="currentLang() === 'ar' ? 'cairoSemibold' : 'poppinsSemibold'"
@@ -158,7 +161,6 @@
       </h3>
 
       <div class="social-links">
-        <!-- Social Media Icons Loop -->
         <a
           *ngFor="let social of socialMedia"
           [href]="social.url"
@@ -174,7 +176,6 @@
 
     <!-- Copyright Section -->
     <div class="copyright">
-      <!-- النصوص العادية -->
       <p [ngClass]="currentLang() === 'ar' ? 'cairoRegular' : 'poppinsRegular'">
         {{ "FOOTER.COPYRIGHT" | translate }} © {{ currentYear }}
         {{ "FOOTER.COMPANY_NAME" | translate }}
