@@ -16,13 +16,11 @@ export const SERVICES = signal<OurSERVICES[]>([
   },
   {
     id: 2,
-    title: 'خدمات تحصيل الديون وتنفيذ السندات',
-    titleEn: 'Debt Collection & Enforcement of Bonds',
-    description: `نقدّم حلولًا احترافية لاسترداد الديون المستحقة للأفراد والشركات بطرق قانونية فعالة،
-ونتولى متابعة القضايا وإجراءات التنفيذ حتى ضمان كامل حقوق العملاء.
-`,
-    descriptionEn: `Our team assists individuals and corporations in recovering outstanding debts through legal and efficient procedures,
-covering case follow-ups and enforcement actions to secure our clients’ rights
+    title: 'خدمات التوثيق والتصديق ',
+    titleEn: 'Documentation and Certification Services',
+    description: ` نقدّم خدمات التوثيق والتصديق لجميع المستندات والعقود بموثوقية عالية وامتثال كامل للأنظمة السعودية، لضمان صحة الوثائق واعتمادها لدى الجهات الرسمية وحماية حقوق العميل.`,
+    descriptionEn: `
+We provide documentation and attestation services for all documents and contracts with high reliability and full compliance with Saudi regulations, to ensure the validity of documents and their acceptance by official authorities and to protect the client’s rights.
 `,
     price: '1500 ريال سعودي',
     priceEn: '1500 SAR',
