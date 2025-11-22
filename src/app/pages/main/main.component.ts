@@ -15,6 +15,7 @@ import { ContactComponent } from './componnts/contact/contact.component';
 import { MainPicComponent } from './componnts/main-pic/main-pic.component';
 import { MainServicesComponent } from './componnts/main-services/main-services.component';
 import { CetifactesComponent } from './componnts/cetifactes/cetifactes.component';
+import { WhyUsComponent } from './why-us/why-us.component';
 
 @Component({
   selector: 'app-main',
@@ -35,6 +36,7 @@ import { CetifactesComponent } from './componnts/cetifactes/cetifactes.component
     MainPicComponent,
     MainServicesComponent,
     CetifactesComponent,
+    WhyUsComponent,
   ],
   templateUrl: './main.component.html',
   styleUrls: ['./main.component.scss'],

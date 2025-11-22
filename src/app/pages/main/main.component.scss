@@ -71,61 +71,6 @@
 // ==========================================
 // 3. Why Us Section
 // ==========================================
-.why-us-section {
-  position: relative;
-  min-height: 60vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 100px 20px;
-  background: url("../../../../public/imgs/main-header.webp") center center;
-  background-size: cover;
-  background-attachment: fixed;
-
-  .section-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(15, 32, 31, 0.85);
-    z-index: 1;
-  }
-
-  .main-cont {
-    position: relative;
-    z-index: 2;
-  }
-
-  .why-us-content {
-    text-align: center;
-    color: #fff;
-    max-width: 900px;
-    margin: 0 auto;
-
-    .section-title {
-      font-size: 40px;
-      font-weight: bold;
-      margin-bottom: 30px;
-      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
-    }
-
-    .title-divider {
-      width: 70px;
-      height: 3px;
-      background: #edb970;
-      margin: 0 auto 40px;
-      border-radius: 2px;
-    }
-
-    .section-description {
-      font-size: 18px;
-      line-height: 1.9;
-      color: rgba(255, 255, 255, 0.95);
-      text-align: justify;
-    }
-  }
-}
 
 // ==========================================
 // 4. CTA Banner Small

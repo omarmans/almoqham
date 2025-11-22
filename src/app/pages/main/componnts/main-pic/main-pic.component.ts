@@ -12,23 +12,37 @@ export class MainPicComponent {
   private langService = inject(LanguageService);
 
   currentLang = this.langService.currentLangSignal;
+
   attorneyData = {
     name: {
-      ar: 'د. سليمان المقحمي',
-      en: 'Dr. Sulaiman Al-Moqhami',
+      ar: 'د. سليمان بن صالح المقحم',
+      en: 'Dr. Sulaiman bin Saleh Al-Muqhem',
     },
     title: {
-      ar: 'المحامي والاستشاري القانوني',
+      ar: 'المحامي والمستشار القانوني',
       en: 'Attorney & Legal Consultant',
     },
     bio: {
-      ar: `يجمع الدكتور سليمان المقحمي بين الخبرة القانونية العميقة والرؤية الإنسانية المستنيرة. حاصل على الدكتوراه في علم النفس وبكالوريوس في المحاماة منذ عام 2005م، مما منحه قدرة فريدة على فهم احتياجات العملاء والتعامل مع القضايا بوعي قانوني وإنساني متكامل.
-يمتد عمله في تقديم الاستشارات القانونية المتخصصة وتمثيل الأفراد والشركات أمام الجهات القضائية في المملكة العربية السعودية، مع تركيز خاص على قضايا التوثيق والأحوال الشخصية والشركات، ساعيًا دائمًا لتحقيق العدالة بأسلوب يحفظ الحقوق ويصون الكرامة.`,
-      en: `Dr. Sulaiman Al-Moqhami combines profound legal expertise with a deep psychological understanding.
-He holds a Ph.D. in Psychology and a Bachelor’s degree in Law (2005), giving him a unique perspective on both the legal and human dimensions of every case.
-Throughout his career, he has provided specialized legal consultations and represented individuals and corporations before Saudi judicial authorities, with strong focus on legal documentation, family, and corporate law — always striving to achieve justice with integrity and compassion.`,
+      ar: `يُعد د. سليمان بن صالح المقحم أحد المحامين البارزين في المملكة، بخبرة تمتد لأكثر من عشرين عامًا في المجال القانوني، وهو الرئيس التنفيذي لشركة د. سليمان بن صالح المقحم للمحاماة والاستشارات القانونية. حاصل على بكالوريوس في القانون (2001) كما حصل على درجة الماجستير والدكتوراه عام (2006) ولديه الكثير من الدورات والندوات في مجال القانون. عضو في الهيئة السعودية للمحامين وعضو في عدة جهات قانونية ومهنية معتمدة في المملكة. يمتاز أسلوبه القانوني بالجمع بين فهم عميق للسلوك الإنساني أثناء النزاعات، خبرة عملية واسعة في الأنظمة السعودية، دقة عالية في الإجراءات القانونية، وحلول عملية تخدم مصلحة العميل قبل أي شيء.`,
+      en: `Dr. Sulaiman bin Saleh Al-Muqhem is one of the most prominent attorneys in the Kingdom, with over twenty years of experience in the legal field. He serves as the Chief Executive Officer of Dr. Sulaiman bin Saleh Al-Muqhem Law Firm and Legal Consultations. He holds a Bachelor's degree in Law (2001), as well as Master's and Doctoral degrees (2006), and has completed numerous courses and seminars in the field of law. He is a member of the Saudi Bar Association and a member of several accredited legal and professional bodies in the Kingdom. He has delivered numerous training courses in the field of law. His legal approach is distinguished by combining a deep understanding of human behavior during disputes, extensive practical experience in Saudi regulations, high precision in legal procedures, and practical solutions that serve the client's best interests above all else.`,
     },
-    image: 'imgs/client.webp', // لو عندك صورة جديدة بدّل المسار هنا
+    qualifications: {
+      ar: [
+        'بكالوريوس في القانون (2001)',
+        'درجة الماجستير والدكتوراه (2006)',
+        'عضو في الهيئة السعودية للمحامين',
+        'عضو في عدة جهات قانونية ومهنية معتمدة',
+        'مدرب معتمد في مجال المحاماة',
+      ],
+      en: [
+        "Bachelor's degree in Law (2001)",
+        "Master's and Doctoral degrees (2006)",
+        'Member of the Saudi Bar Association',
+        'Member of several accredited legal and professional bodies',
+        'Certified trainer in the field of law',
+      ],
+    },
+    image: 'imgs/cor/MainPhoto.webp',
     social: {
       facebook: '#',
       twitter: '#',
@@ -36,4 +50,8 @@ Throughout his career, he has provided specialized legal consultations and repre
       instagram: '#',
     },
   };
+
+  getText(text: { ar: string; en: string }): string {
+    return text[this.currentLang() as 'ar' | 'en'];
+  }
 }
