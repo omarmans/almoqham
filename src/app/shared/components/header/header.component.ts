@@ -33,6 +33,12 @@ export class HeaderComponent implements OnInit, OnDestroy {
     private languageService: LanguageService,
     private router: Router
   ) {}
+  scrollTo(sectionId: string) {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
 
   ngOnInit() {
     this.langSubscription = this.languageService.currentLang$.subscribe(
