@@ -15,81 +15,97 @@ export class FaqComponent implements OnInit, OnDestroy {
   private langSubscription?: Subscription;
 
   faqs = [
-    // {
-    //   question: {
-    //     ar: 'ما هو الفارق بين طلب الاستشارة القانونية، وطلب دراسة القضية؟',
-    //     en: 'What is the difference between requesting legal advice and a case study?',
-    //   },
-    //   answers: {
-    //     ar: [
-    //       'الاستشارة القانونية: تعني طلب الحصول على الرأي القانوني فيما يتعلق بمسألة معينة أو نزاع معين، من أجل بيان وجهة نظر القانون فيها.',
-    //       'دراسة القضية: تقديم دراسة للعميل سواء كان فردًا أو شركة، مستندة إلى تفاصيل القضية وجوانبها القانونية للوصول إلى أنسب الحلول القانونية.',
-    //     ],
-    //     en: [
-    //       'Legal advice: means seeking a professional legal opinion regarding a specific issue or dispute to clarify the legal perspective.',
-    //       'Case study: a detailed analysis provided to a client or company, based on case details and legal aspects to find the best possible solutions.',
-    //     ],
-    //   },
-    //   open: false,
-    // },
     {
       question: {
-        ar: 'ما الفرق بين المحامي والمستشار القانوني والحقوقي؟',
-        en: 'What is the difference between a lawyer, legal consultant, and jurist?',
+        ar: 'متى يلزم توثيق العقد أو المعاملة؟',
+        en: 'When is it required to notarize a contract or transaction?',
       },
       answers: {
         ar: [
-          'المحامي: هو شخص حاصل على ترخيص بمزاولة مهنة المحاماة ويقوم بالترافع أمام المحاكم والدفاع عن القضايا.',
-          'المستشار القانوني: شخص متخصص في تقديم الاستشارات القانونية وصياغة العقود ومراجعة الاتفاقيات دون الترافع أمام المحاكم.',
+          'يتم توثيق العقد عند وجود التزام مالي أو تعاقدي بين طرفين، أو عند تسجيل عقار، أو عند إصدار وكالة، أو عند وجود أي معاملة تتطلب حجية قانونية أمام الجهات الرسمية والمحاكم.',
         ],
         en: [
-          'Lawyer: a licensed professional who practices law, represents clients, and pleads before courts.',
-          'Legal consultant: a specialist who provides legal advice, drafts and reviews contracts, but does not represent clients in court.',
+          'A contract must be notarized when there is a financial or contractual obligation between two parties, when registering a property, issuing a power of attorney, or for any transaction that requires legal validity before official authorities and courts.',
         ],
       },
       open: false,
     },
+
     {
       question: {
-        ar: 'متى أحتاج إلى محامي؟',
-        en: 'When do I need a lawyer?',
+        ar: 'ما الفرق بين المحامي والمستشار القانوني؟',
+        en: 'What is the difference between a lawyer and a legal consultant?',
       },
       answers: {
         ar: [
-          'تحتاج إلى محامي عند مواجهة قضية قانونية، أو عند توقيع عقود هامة، أو عند الحاجة إلى رفع أو الدفاع في قضية.',
+          'المحامي مرخص للمرافعة أمام المحاكم وتمثيل العملاء، بينما المستشار القانوني يقدم آراء قانونية وصياغة عقود دون تمثيل أمام القضاء. بعض القضايا تتطلب محامياً فقط.',
         ],
         en: [
-          'You need a lawyer when facing a legal case, signing important contracts, or filing or defending a lawsuit.',
+          'A lawyer is licensed to represent clients and plead before courts, while a legal consultant provides legal opinions and drafts contracts without representing clients in court. Some cases require a lawyer specifically.',
         ],
       },
       open: false,
     },
+
     {
       question: {
-        ar: 'هل يمكن لأي شخص غير المحامي رفع دعوى قضائية؟',
-        en: 'Can anyone other than a lawyer file a lawsuit?',
+        ar: 'كم تستغرق إجراءات التقاضي في السعودية؟',
+        en: 'How long do legal proceedings take in Saudi Arabia?',
       },
       answers: {
         ar: [
-          'لا، لا يمكن إلا للمحامي المرخص له رفع الدعاوى أمام المحاكم نيابة عن الغير، حسب النظام والقانون المعمول به.',
+          'تختلف مدة التقاضي حسب نوع الدعوى، والاختصاص، ونوع المستندات، واستجابة الأطراف. غالباً تتراوح بين شهرين إلى 12 شهراً، وقد تزيد في القضايا المعقدة.',
         ],
         en: [
-          'No, only a licensed lawyer is allowed to file lawsuits on behalf of others according to the law.',
+          'The duration of litigation varies depending on the type of case, jurisdiction, documents, and parties’ responsiveness. It typically ranges from 2 to 12 months and may be longer in complex cases.',
         ],
       },
       open: false,
     },
+
     {
       question: {
-        ar: 'ما هي المدة التي تستغرقها القضايا في المحاكم؟',
-        en: 'How long do court cases usually take?',
+        ar: 'ما هي تكلفة الاستشارات القانونية؟',
+        en: 'What is the cost of legal consultations?',
       },
       answers: {
         ar: [
-          'تختلف المدة حسب نوع القضية، وعدد الجلسات، وسرعة الإجراءات القضائية، وقد تمتد من عدة أشهر إلى سنوات.',
+          'تختلف التكلفة حسب نوع الخدمة، ومدتها، وطبيعة القضية. تقدم الشركة أسعاراً عادلة وشفافة يتم توضيحها عند التواصل بناء على تقييم الحالة القانونية.',
         ],
         en: [
-          'The duration varies depending on the type of case, number of sessions, and legal procedures; it may take from months to years.',
+          'The cost varies depending on the type of service, its duration, and the nature of the case. The firm provides fair and transparent pricing which is clarified upon consultation based on the legal assessment.',
+        ],
+      },
+      open: false,
+    },
+
+    {
+      question: {
+        ar: 'هل يمكن إنهاء النزاعات بدون اللجوء للمحكمة؟',
+        en: 'Can disputes be resolved without going to court?',
+      },
+      answers: {
+        ar: [
+          'نعم، يمكن ذلك عبر التسويات الودية، وصيغ الاتفاقات المرضية للطرفين، وصياغة محاضر صلح رسمية تحفظ الحقوق وتمنع النزاعات المستقبلية.',
+        ],
+        en: [
+          'Yes, disputes can be resolved through amicable settlements, mutually acceptable agreements, and drafting official reconciliation documents that protect rights and prevent future disputes.',
+        ],
+      },
+      open: false,
+    },
+
+    {
+      question: {
+        ar: 'ما هي خطوات تأسيس شركة في السعودية؟',
+        en: 'What are the steps to establish a company in Saudi Arabia?',
+      },
+      answers: {
+        ar: [
+          'تبدأ الخطوات بتحديد نوع الكيان التجاري، ثم استخراج السجل التجاري، وفتح ملف لدى هيئة الزكاة والضريبة والجمارك، ثم إنشاء حسابات بنكية، واستكمال التراخيص اللازمة حسب النشاط.',
+        ],
+        en: [
+          'The process begins by determining the type of business entity, obtaining a commercial registration, opening a file with the Zakat, Tax and Customs Authority, setting up bank accounts, and completing the required licenses based on the business activity.',
         ],
       },
       open: false,
